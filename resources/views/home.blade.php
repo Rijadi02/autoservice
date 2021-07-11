@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>{{config('app.name', 'Checkos') }}</title>
+        <title>{{config('app.name', 'autoservice') }}</title>
         <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
 
 
@@ -20,7 +20,7 @@
     </head>
     <body class="nav-fixed">
         <nav class="topnav navbar navbar-expand shadow navbar-light bg-white" id="sidenavAccordion">
-            <a class="navbar-brand" href="index.html">Checkos Panel</a>
+            <a class="navbar-brand" href="index.html">autoservice Panel</a>
             <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 mr-lg-2" id="sidebarToggle" href="#"><i data-feather="menu"></i></button>
             {{-- <form class="form-inline mr-auto d-none d-md-block">
                 <div class="input-group input-group-joined input-group-solid">

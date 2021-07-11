@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/users', [App\Http\Controllers\Auth\RegisterController::class, 'index'])->name('users.index');
+Route::post('/users/store', [App\Http\Controllers\Auth\RegisterController::class, 'store'])->name('users.store');
