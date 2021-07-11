@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('currency');
             $table->string('Tariff');
             $table->string('bank');
+            $table->integer('terms');
             $table->rememberToken();
             $table->timestamps();
         });
