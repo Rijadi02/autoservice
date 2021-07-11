@@ -23,3 +23,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/users', [App\Http\Controllers\Auth\RegisterController::class, 'index'])->name('users.index');
 Route::post('/users/store', [App\Http\Controllers\Auth\RegisterController::class, 'store'])->name('users.store');
+Route::get('users/{user}/edit',  [App\Http\Controllers\Auth\RegisterController::class, 'edit'])->name('users.edit');
+Route::patch('users/{user}/update', [App\Http\Controllers\Auth\RegisterController::class, 'update'])->name('users.update');

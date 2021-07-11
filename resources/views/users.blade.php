@@ -14,7 +14,7 @@
             <div class="card-body">
 
                 @if (isset($user))
-                <form method="POST" action="{{ route("user.update", $user->id) }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ route("users.update", $user->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
 
@@ -28,7 +28,7 @@
                 @enderror
                 </div>
 
-                <div class="col-lg-12">
+                {{-- <div class="col-lg-12">
                 <label for="email" class="col-md-12 col-form-label">Email</label>
                 <input id="email" type="email" name="email" class="form-control @error("email") is-invalid @enderror" value="{{ old("email") ?? $user->email }}" autocomplete="email">
                 @error("email")
@@ -36,7 +36,7 @@
                 <strong>{{ $message }}</strong>
                 </span>
                 @enderror
-                </div>
+                </div> --}}
 
 
                 <div class="col-lg-12">
@@ -130,7 +130,7 @@
                 </div>
 
 
-                <div class="col-lg-12">
+                {{-- <div class="col-lg-12">
                 <label for="role_id" class="col-md-12 col-form-label">Role</label>
                 <input id="role_id" type="text" name="bank" class="form-control @error("role_id") is-invalid @enderror" value="{{ old("role_id") ?? $user->role_id }}" autocomplete="role_id">
                 @error("role_id")
@@ -138,10 +138,10 @@
                 <strong>{{ $message }}</strong>
                 </span>
                 @enderror
-                </div>
+                </div> --}}
 
-                 <div class="form-group mt-3">
-                <button type="submit" class="btn btn-primary">Update</button>
+                 <div class="form-group mt-3 d-flex" style="justify-content: center">
+                <button type="submit" class="btn btn-primary pr-5 pl-5 mt-1">Update</button>
                 </form>
 
                 @else
@@ -279,9 +279,15 @@
                 @enderror
                 </div>
 
+
+
                 <div class="col-lg-12">
-                <label for="role_id" class="col-md-12 col-form-label">Role</label>
-                <input id="role_id" type="text" name="role_id" class="form-control @error("role_id") is-invalid @enderror" value="{{ old("role_id") }}" autocomplete="role_id">
+                <label for="role_id" class="col-md-12 col-form-label">Role Id:</label>
+                <select name="role_id"  id="role_id"  class="form-control @error("role_id") is-invalid @enderror" value="{{ old("role_id") }}">
+                    <option hidden disabled selected >-- Choose Role Id--</option>
+                    <option value="1">Admin</option>
+                    <option value="0">Worker</option>
+                    </select>
                 @error("role_id")
                 <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -294,6 +300,69 @@
                 </form>
                 @endif
 
+            </div>
+        </div>
+
+        <div class="card ml-5">
+            <div class="card-header">All Users</div>
+            <div class="card-body">
+                <div class="datatable" style="overflow-x:auto;">
+                    <table class="table table-bordered table-hover overflow-auto" style="overflow: auto;" id="dataTable" width="100%" cellspacing="0">
+                        <tr>
+                        <th>Name</th>
+                        {{-- <th>Points</th>
+                        <th>Color</th>
+                        <th>Actions</th> --}}
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        {{-- <th>points</th>
+                        <th>Color</th>
+                        <th>Actions</th> --}}
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach ($users as $user)
+                    <tr>
+                        <td>{{$user->name}}</td>
+
+                        {{-- <td>{{$badge->points}}</td> --}}
+                        {{-- <td style="background-color: {{$badge->color}}"> </td> --}}
+                        {{-- <td>
+                            <a class="btn btn-datatable btn-icon btn-transparent-dark mr-2" href="{{ route('badge.edit', $badge->id) }}"><i data-feather="edit"></i></a>
+
+                            <div class="modal fade" id="id{{$badge->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Delete Category</h5>
+                                            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                        </div>
+                                        <div class="modal-body">This will delete the selected badge and all the data associated with it!</div>
+                                        <div class="modal-footer"><button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+
+
+                                <form method="POST" action="{{ route('badge.destroy', $badge->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger" type="submit">Delete</button></div>
+                                </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="" class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#id{{$badge->id}}"><i data-feather="trash-2"></i></a>
+
+                        </td> --}}
+
+
+                    </tr>
+                    @endforeach
+
+                </tbody>
+            </table>
             </div>
         </div>
 

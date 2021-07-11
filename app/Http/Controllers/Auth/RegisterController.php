@@ -144,4 +144,56 @@ class RegisterController extends Controller
         $user->save();
         return redirect('/login');
     }
+
+    public function update(User $user)
+    {
+        $data = request()->validate(
+            [
+                'name' => ['required', 'string', 'max:255'],
+                // 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                // 'password' => ['required', 'string', 'min:8'],
+                'address' => ['required'],
+                'country' => ['required'],
+                'street' => ['required'],
+                'city' => ['required'],
+                'zip' => ['required'],
+                'tel' => ['required'],
+                'currency' => ['required'],
+                'tariff' => ['required'],
+                'bank' => ['required'],
+                // 'role_id' => ['required'],
+            ]
+        );
+
+
+        $user->name = $data['name'];
+        // $user->email = $data['email'];
+        // $user->password = Hash::make($data['password']);
+        $user->address = $data['address'];
+        $user->country = $data['country'];
+        $user->street = $data['street'];
+        $user->city = $data['city'];
+        $user->zip = $data['zip'];
+        $user->tel = $data['tel'];
+        $user->currency = $data['currency'];
+        $user->tariff = $data['tariff'];
+        $user->bank = $data['bank'];
+        // $user->role_id = $data['role_id'];
+        $user->terms = 1;
+
+        if ($user->isDirty('name')) {
+            session()->flash('badge-updated', 'Badge updated: ' . request('name'));
+        } else {
+            session()->flash('badge-updated', 'Nothing to add: ' . request('name'));
+        }
+        $user->save();
+
+        return redirect('/users');
+    }
+
+    public function edit(User $user)
+    {
+        $users = User::all();
+        return view('users', compact('users', 'user'));
+    }
 }
