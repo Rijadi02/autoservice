@@ -302,8 +302,10 @@
 
             </div>
         </div>
+        <div class="container p-0 m-0 mt-5 ">
 
-        <div class="card ml-5">
+            <div class="card mb-4">
+
             <div class="card-header">All Users</div>
             <div class="card-body">
                 <div class="datatable" style="overflow-x:auto;">
@@ -311,13 +313,11 @@
                         <tr>
                         <th>Name</th>
                         <th>Actions</th>
-
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
                         <th>Name</th>
-
                         <th>Actions</th>
                     </tr>
                 </tfoot>

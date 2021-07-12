@@ -7,79 +7,95 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $clients = Client::all();
+        return view('clients', compact('clients'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function store()
     {
-        //
+        $data = request()->validate(
+            [
+                'company' => ['required'],
+                'name' => ['required', 'string', 'max:255'],
+                'address' => ['required'],
+                'country' => ['required'],
+                'street' => ['required'],
+                'city' => ['required'],
+                'zip' => ['required'],
+                'email' => ['required', 'string', 'email', 'max:255'],
+                'phone' => ['required'],
+            ]
+        );
+
+        $client = new \App\Models\Client();
+
+        $client->company = $data['company'];
+        $client->name = $data['name'];
+        $client->email = $data['email'];
+        $client->address = $data['address'];
+        $client->country = $data['country'];
+        $client->street = $data['street'];
+        $client->city = $data['city'];
+        $client->zip = $data['zip'];
+        $client->phone = $data['phone'];
+
+
+
+        $client->save();
+        return redirect('/clients');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function update(Client $client)
     {
-        //
+        $data = request()->validate(
+            [
+                'company' => ['required'],
+                'name' => ['required', 'string', 'max:255'],
+                'address' => ['required'],
+                'country' => ['required'],
+                'street' => ['required'],
+                'city' => ['required'],
+                'zip' => ['required'],
+                'email' => ['required', 'string', 'email', 'max:255'],
+                'phone' => ['required'],
+            ]
+        );
+
+
+        $client->company = $data['company'];
+        $client->name = $data['name'];
+        $client->email = $data['email'];
+        $client->address = $data['address'];
+        $client->country = $data['country'];
+        $client->street = $data['street'];
+        $client->city = $data['city'];
+        $client->zip = $data['zip'];
+        $client->phone = $data['phone'];
+
+
+        if ($client->isDirty('name')) {
+            session()->flash('client-updated', 'Client updated: ' . request('name'));
+        } else {
+            session()->flash('client-updated', 'Nothing to add: ' . request('name'));
+        }
+        $client->save();
+
+        return redirect('/clients');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Client  $client
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Client $client)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Client  $client
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Client $client)
     {
-        //
+        $clients = Client::all();
+        return view('clients', compact('clients', 'client'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Client  $client
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Client $client)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Client  $client
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Client $client)
     {
-        //
+        $client->delete();
+        session()->flash('client-deleted', 'Client deleted: ' . $client->title);
+        return redirect('/clients');
     }
 }

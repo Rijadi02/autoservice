@@ -29,3 +29,9 @@ Route::patch('users/{user}/update', [App\Http\Controllers\Auth\RegisterControlle
 Route::delete('users/{user}/delete', [App\Http\Controllers\Auth\RegisterController::class, 'destroy'])->name('users.destroy');
 // Route::get('/login', [App\Http\Controllers\Auth\RegisterController::class, 'index'])->name('user.login');
 
+Route::get('/clients', [App\Http\Controllers\ClientController::class, 'index'])->name('clients.index');
+Route::post('/clients/store', [App\Http\Controllers\ClientController::class, 'store'])->name('clients.store');
+Route::get('clients/{client}/edit',  [App\Http\Controllers\ClientController::class, 'edit'])->name('clients.edit');
+Route::patch('clients/{client}/update', [App\Http\Controllers\ClientController::class, 'update'])->name('clients.update');
+Route::delete('clients/{client}/delete', [App\Http\Controllers\ClientController::class, 'destroy'])->name('clients.destroy');
+
