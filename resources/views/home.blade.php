@@ -81,6 +81,7 @@
                             <div class="sidenav-menu-heading">Nav</div>
 
 
+{{--
                             <a class="nav-link" href="{{route('admin.blogs.index')}}">
                                 <div class="nav-link-icon"><i class="fas fa-chart-line"></i></div>
                                 Blogs
@@ -92,7 +93,7 @@
                             <a class="nav-link" href="{{route('admin.galleries.index')}}">
                                 <div class="nav-link-icon"><i class="fas fa-chart-line"></i></div>
                                 Gallery
-                            </a>
+                            </a> --}}
 
 
                             {{-- <a class="nav-link" href="{{route('article.index')}}">

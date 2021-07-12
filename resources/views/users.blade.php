@@ -310,41 +310,36 @@
                     <table class="table table-bordered table-hover overflow-auto" style="overflow: auto;" id="dataTable" width="100%" cellspacing="0">
                         <tr>
                         <th>Name</th>
-                        {{-- <th>Points</th>
-                        <th>Color</th>
-                        <th>Actions</th> --}}
+                        <th>Actions</th>
+
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
                         <th>Name</th>
-                        {{-- <th>points</th>
-                        <th>Color</th>
-                        <th>Actions</th> --}}
+
+                        <th>Actions</th>
                     </tr>
                 </tfoot>
                 <tbody>
                     @foreach ($users as $user)
                     <tr>
                         <td>{{$user->name}}</td>
+                        <td>
+                            <a class="btn btn-datatable btn-icon btn-transparent-dark mr-2" href="{{ route('users.edit', $user->id) }}"><i data-feather="edit"></i></a>
 
-                        {{-- <td>{{$badge->points}}</td> --}}
-                        {{-- <td style="background-color: {{$badge->color}}"> </td> --}}
-                        {{-- <td>
-                            <a class="btn btn-datatable btn-icon btn-transparent-dark mr-2" href="{{ route('badge.edit', $badge->id) }}"><i data-feather="edit"></i></a>
-
-                            <div class="modal fade" id="id{{$badge->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="id{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalLabel">Delete Category</h5>
                                             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                         </div>
-                                        <div class="modal-body">This will delete the selected badge and all the data associated with it!</div>
+                                        <div class="modal-body">This will delete the selected User and all the data associated with it!</div>
                                         <div class="modal-footer"><button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
 
 
-                                <form method="POST" action="{{ route('badge.destroy', $badge->id) }}">
+                                <form method="POST" action="{{ route('users.destroy', $user->id) }}">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger" type="submit">Delete</button></div>
@@ -353,9 +348,9 @@
                                 </div>
                             </div>
 
-                            <a href="" class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#id{{$badge->id}}"><i data-feather="trash-2"></i></a>
+                            <a href="" class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal" data-target="#id{{$user->id}}"><i data-feather="trash-2"></i></a>
 
-                        </td> --}}
+                        </td>
 
 
                     </tr>

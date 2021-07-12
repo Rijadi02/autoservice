@@ -38,7 +38,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('admin');
     }
 
     public function index()
@@ -47,61 +47,6 @@ class RegisterController extends Controller
         return view('users', compact('users'));
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    // protected function validator(array $data)
-    // {
-
-    //     Validator::make($data, [
-    //         'name' => ['required', 'string', 'max:255'],
-    //         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-    //         'password' => ['required', 'string', 'min:8', 'confirmed'],
-    //         'address' => ['required'],
-    //         'country' => ['required'],
-    //         'street' => ['required'],
-    //         'city' => ['required'],
-    //         'zip' => ['required'],
-    //         'tel' => ['required'],
-    //         'currency' => ['required'],
-    //         'tarif' => ['required'],
-    //         'bank' => ['required'],
-    //         'role_id' => ['required'],
-    //     ]);
-    // }
-
-    // /**
-    //  * Create a new user instance after a valid registration.
-    //  *
-    //  * @param  array  $data
-    //  * @return \App\Models\User
-    //  */
-    // protected function create(array $data)
-    // {
-    //     dd('hajde');
-    //     return User::create([
-    //         'name' => $data['name'],
-    //         'email' => $data['email'],
-    //         'password' => Hash::make($data['password']),
-    //         'address' => $data['address'],
-    //         'country' => $data['country'],
-    //         'zip' => $data['zip'],
-    //         'city' => $data['city'],
-    //         'street' => $data['street'],
-    //         'tel' => $data['tel'],
-    //         'currency' => $data['currency'],
-    //         'tarif' => $data['tarif'],
-    //         'bank' => $data['bank'],
-    //         'terms' => 1,
-    //         'role_id' => $data['role_id'],
-
-
-
-    //     ]);
-    // }
 
     public function store()
     {
@@ -142,7 +87,7 @@ class RegisterController extends Controller
 
 
         $user->save();
-        return redirect('/login');
+        return redirect('/users');
     }
 
     public function update(User $user)
@@ -182,9 +127,9 @@ class RegisterController extends Controller
         $user->terms = 1;
 
         if ($user->isDirty('name')) {
-            session()->flash('badge-updated', 'Badge updated: ' . request('name'));
+            session()->flash('user-updated', 'User updated: ' . request('name'));
         } else {
-            session()->flash('badge-updated', 'Nothing to add: ' . request('name'));
+            session()->flash('user-updated', 'Nothing to add: ' . request('name'));
         }
         $user->save();
 
@@ -195,5 +140,12 @@ class RegisterController extends Controller
     {
         $users = User::all();
         return view('users', compact('users', 'user'));
+    }
+
+    public function destroy(User $user)
+    {
+        $user->delete();
+        session()->flash('user-deleted', 'User deleted: ' . $user->title);
+        return redirect('/users');
     }
 }
