@@ -27,3 +27,5 @@ Route::post('/users/store', [App\Http\Controllers\Auth\RegisterController::class
 Route::get('users/{user}/edit',  [App\Http\Controllers\Auth\RegisterController::class, 'edit'])->name('users.edit');
 Route::patch('users/{user}/update', [App\Http\Controllers\Auth\RegisterController::class, 'update'])->name('users.update');
 Route::delete('users/{user}/delete', [App\Http\Controllers\Auth\RegisterController::class, 'destroy'])->name('users.destroy');
+// Route::get('/login', [App\Http\Controllers\Auth\RegisterController::class, 'index'])->name('user.login');
+
