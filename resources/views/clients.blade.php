@@ -147,8 +147,8 @@
                             <div class="col-lg-12">
                                 <label for="name" class="col-md-12 col-form-label">Name</label>
                                 <input id="name" type="text" name="name"
-                                    class="form-control @error('name') is-invalid @enderror"
-                                    value="{{ old('name') }}" autocomplete="name">
+                                    class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}"
+                                    autocomplete="name">
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -159,8 +159,8 @@
                             <div class="col-lg-12">
                                 <label for="email" class="col-md-12 col-form-label">Email</label>
                                 <input id="email" type="email" name="email"
-                                    class="form-control @error('email') is-invalid @enderror"
-                                    value="{{ old('email') }}" autocomplete="email">
+                                    class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}"
+                                    autocomplete="email">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -171,8 +171,8 @@
                             <div class="col-lg-12">
                                 <label for="phone" class="col-md-12 col-form-label">Phone</label>
                                 <input id="phone" type="text" name="phone"
-                                    class="form-control @error('phone') is-invalid @enderror"
-                                    value="{{ old('phone') }}" autocomplete="phone">
+                                    class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}"
+                                    autocomplete="phone">
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -219,8 +219,8 @@
                             <div class="col-lg-12">
                                 <label for="city" class="col-md-12 col-form-label">City</label>
                                 <input id="city" type="text" name="city"
-                                    class="form-control @error('city') is-invalid @enderror"
-                                    value="{{ old('city') }}" autocomplete="city">
+                                    class="form-control @error('city') is-invalid @enderror" value="{{ old('city') }}"
+                                    autocomplete="city">
                                 @error('city')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -231,8 +231,8 @@
                             <div class="col-lg-12">
                                 <label for="zip" class="col-md-12 col-form-label">Zip</label>
                                 <input id="zip" type="text" name="zip"
-                                    class="form-control @error('zip') is-invalid @enderror"
-                                    value="{{ old('zip') }}" autocomplete="zip">
+                                    class="form-control @error('zip') is-invalid @enderror" value="{{ old('zip') }}"
+                                    autocomplete="zip">
                                 @error('zip')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

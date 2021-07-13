@@ -101,7 +101,7 @@ class ClientController extends Controller
     public function destroy(Client $client)
     {
         $client->delete();
-        session()->flash('client-deleted', 'Client deleted: ' . $client->title);
+        session()->flash('client-deleted', 'Client deleted: ' . $client->name);
         return redirect('/clients');
     }
 }

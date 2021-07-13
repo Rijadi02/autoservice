@@ -137,12 +137,9 @@
 <x-home-master>
 
     @section('content')
-    <div class="container">
+        <div class="container">
 
-    </div>
+        </div>
     @endsection
 
 </x-home-master>
-
-
-
