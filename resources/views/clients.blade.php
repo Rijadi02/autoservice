@@ -259,6 +259,8 @@
                             width="100%" cellspacing="0">
                             <tr>
                                 <th>Name</th>
+                                <th>Register Car/Damage</th>
+                                <th>All Cars/Damage</th>
                                 <th>Actions</th>
 
                             </tr>
@@ -266,14 +268,22 @@
                             <tfoot>
                                 <tr>
                                     <th>Name</th>
+                                    <th>Register Car/Damage</th>
+                                    <th>All Cars/Damage</th>
 
                                     <th>Actions</th>
+
                                 </tr>
                             </tfoot>
                             <tbody>
                                 @foreach ($clients as $client)
                                     <tr>
                                         <td>{{ $client->name }}</td>
+                                        <td>
+                                            <a class="btn btn-primary"  href="{{ route('clients.edit', $client->id) }}">Add car/damage</a>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-secondary"  href="{{ route('clients.edit', $client->id) }}">All cars</a>                                        </td>
                                         <td>
                                             <a class="btn btn-datatable btn-icon btn-transparent-dark mr-2"
                                                 href="{{ route('clients.edit', $client->id) }}"><i
@@ -312,6 +322,7 @@
                                                     data-feather="trash-2"></i></a>
 
                                         </td>
+
 
 
                                     </tr>

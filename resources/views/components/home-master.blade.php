@@ -96,8 +96,13 @@
                         <div class="sidenav-menu-heading">Nav</div>
 
                         <a class="nav-link" href="{{ route('users.index') }}">
-                            <div class="nav-link-icon"><i class="fas fa-users"></i></div>
+                            <div class="nav-link-icon"><i class="fas fa-user"></i></div>
                             Users
+                        </a>
+
+                        <a class="nav-link" href="{{ route('clients.index') }}">
+                            <div class="nav-link-icon"><i class="fas fa-users"></i></div>
+                            Clients
                         </a>
 
                         {{-- <a class="nav-link" href="{{route('admin.blogs.index')}}">
