@@ -1,9 +1,9 @@
 <x-home-master>
 
     @section('content')
-        <div class="container mt-5">
+        <div class="container ">
 
-            <div class="card mb-4">
+            {{-- <div class="card mb-4">
                 <div class="card-header">
                     Add Car
                 </div>
@@ -334,7 +334,7 @@
 
             </div>
 
-        </div>
+        </div> --}}
 
 
         <!-- Main page content-->
@@ -349,7 +349,7 @@
                             aria-controls="wizard1" aria-selected="true">
                             <div class="wizard-step-icon">1</div>
                             <div class="wizard-step-text">
-                                <div class="wizard-step-text-name">Account Setup</div>
+                                <div class="wizard-step-text-name">Car Data</div>
                                 <div class="wizard-step-text-details">Basic details and information</div>
                             </div>
                         </a>
@@ -358,8 +358,8 @@
                             aria-controls="wizard2" aria-selected="true">
                             <div class="wizard-step-icon">2</div>
                             <div class="wizard-step-text">
-                                <div class="wizard-step-text-name">Billing Details</div>
-                                <div class="wizard-step-text-details">Credit card information</div>
+                                <div class="wizard-step-text-name">Vehicle Body Types</div>
+                                <div class="wizard-step-text-details">Type of the car</div>
                             </div>
                         </a>
                         <!-- Wizard navigation item 3-->
@@ -367,7 +367,7 @@
                             aria-controls="wizard3" aria-selected="true">
                             <div class="wizard-step-icon">3</div>
                             <div class="wizard-step-text">
-                                <div class="wizard-step-text-name">Preferences</div>
+                                <div class="wizard-step-text-name">Damages</div>
                                 <div class="wizard-step-text-details">Notification and account options</div>
                             </div>
                         </a>
@@ -376,7 +376,7 @@
                             aria-controls="wizard4" aria-selected="true">
                             <div class="wizard-step-icon">4</div>
                             <div class="wizard-step-text">
-                                <div class="wizard-step-text-name">Review &amp; Submit</div>
+                                <div class="wizard-step-text-name">Images</div>
                                 <div class="wizard-step-text-details">Review and submit changes</div>
                             </div>
                         </a>
@@ -389,10 +389,10 @@
                             aria-labelledby="wizard1-tab">
                             <div class="row justify-content-center">
                                 <div class="col-xxl-6 col-xl-8">
-                                    <h3 class="text-primary">Step 1</h3>
-                                    <h5 class="card-title">Enter your account information</h5>
+                                    <h5 class="card-title">Client Name:</h5>
+                                    <h3 class="text-primary">{{$client->name}}</h3>
 
-                                    <form method="POST" action="{{ route('cars.store') }}" enctype="multipart/form-data">
+                                    <form method="POST" action="{{ route('cars.store',$client->id) }}" enctype="multipart/form-data">
                                         @csrf
 
                                         <div class="form-row">
@@ -422,7 +422,7 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="col-md-4 form-group">
-                                                <label for="body_type" class="col-md-12 col-form-label">Body_type</label>
+                                                <label for="body_type" class="col-md-12 col-form-label">Body Type</label>
                                                 <input id="body_type" type="text" name="body_type" placeholder="Body type"
                                                     class="form-control @error('body_type') is-invalid @enderror"
                                                     value="{{ old('body_type') }}" autocomplete="body_type">

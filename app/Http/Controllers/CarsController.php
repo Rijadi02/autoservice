@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cars;
+use App\Models\Client;
 use Illuminate\Http\Request;
 
 class CarsController extends Controller
@@ -13,10 +14,10 @@ class CarsController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Client $client)
     {
         $cars = Cars::all();
-        return view('cars', compact('cars'));
+        return view('cars', compact('cars','client'));
     }
 
 
@@ -24,31 +25,31 @@ class CarsController extends Controller
     {
         $data = request()->validate(
             [
-                'company' => ['required'],
-                'name' => ['required', 'string', 'max:255'],
-                'address' => ['required'],
-                'country' => ['required'],
-                'street' => ['required'],
-                'city' => ['required'],
-                'zip' => ['required'],
-                'email' => ['required', 'string', 'email', 'max:255'],
-                'phone' => ['required'],
+                'license' => ['required'],
+                'chassis' => ['required'],
+                'body_type' => ['required'],
+                'brand' => ['required'],
+                'model' => ['required'],
+                'color' => ['required'],
+                'year' => [''],
+                'fuel' => [''],
+                'weight' => [''],
+                'client_id' => ['required']
             ]
         );
 
         $car = new \App\Models\Cars();
 
-        $car->company = $data['company'];
-        $car->name = $data['name'];
-        $car->email = $data['email'];
-        $car->address = $data['address'];
-        $car->country = $data['country'];
-        $car->street = $data['street'];
-        $car->city = $data['city'];
-        $car->zip = $data['zip'];
-        $car->phone = $data['phone'];
-
-
+        $car->license = $data['license'];
+        $car->chassis = $data['chassis'];
+        $car->body_type = $data['body_type'];
+        $car->brand = $data['brand'];
+        $car->model = $data['model'];
+        $car->color = $data['color'];
+        $car->year = $data['year'];
+        $car->fuel = $data['fuel'];
+        $car->weight = $data['weight'];
+        $car->client_id = $data['client_id'];
 
         $car->save();
         return redirect('/cars');
@@ -58,31 +59,33 @@ class CarsController extends Controller
     {
         $data = request()->validate(
             [
-                'company' => ['required'],
-                'name' => ['required', 'string', 'max:255'],
-                'address' => ['required'],
-                'country' => ['required'],
-                'street' => ['required'],
-                'city' => ['required'],
-                'zip' => ['required'],
-                'email' => ['required', 'string', 'email', 'max:255'],
-                'phone' => ['required'],
+                'license' => ['required'],
+                'chassis' => ['required'],
+                'body_type' => ['required'],
+                'brand' => ['required'],
+                'model' => ['required'],
+                'color' => ['required'],
+                'year' => [''],
+                'fuel' => [''],
+                'weight' => [''],
+                'client_id' => ['required']
             ]
         );
 
 
-        $car->company = $data['company'];
-        $car->name = $data['name'];
-        $car->email = $data['email'];
-        $car->address = $data['address'];
-        $car->country = $data['country'];
-        $car->street = $data['street'];
-        $car->city = $data['city'];
-        $car->zip = $data['zip'];
-        $car->phone = $data['phone'];
 
+        $car->license = $data['license'];
+        $car->chassis = $data['chassis'];
+        $car->body_type = $data['body_type'];
+        $car->brand = $data['brand'];
+        $car->model = $data['model'];
+        $car->color = $data['color'];
+        $car->year = $data['year'];
+        $car->fuel = $data['fuel'];
+        $car->weight = $data['weight'];
+        $car->client_id = $data['client_id'];
 
-        if ($car->isDirty('name')) {
+        if ($car->isDirty('license')) {
             session()->flash('client-updated', 'Client updated: ' . request('name'));
         } else {
             session()->flash('client-updated', 'Nothing to add: ' . request('name'));
