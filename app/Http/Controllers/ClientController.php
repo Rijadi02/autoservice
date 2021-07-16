@@ -31,7 +31,7 @@ class ClientController extends Controller
                 'street' => ['required'],
                 'city' => ['required'],
                 'zip' => ['required'],
-                'email' => ['required', 'string', 'email', 'max:255'],
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:clients'],
                 'phone' => ['required'],
             ]
         );

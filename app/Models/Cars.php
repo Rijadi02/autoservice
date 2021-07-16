@@ -13,4 +13,9 @@ class Cars extends Model
     {
         return $this->belongsTo(Client::class);
     }
+
+    public function damages()
+    {
+        return $this->hasMany(Damage::class);
+    }
 }
