@@ -40,3 +40,10 @@ Route::post('cars/{client}/store', [App\Http\Controllers\CarsController::class, 
 Route::get('cars/{client}/edit',  [App\Http\Controllers\CarsController::class, 'edit'])->name('cars.edit');
 Route::patch('cars/{car}/update', [App\Http\Controllers\CarsController::class, 'update'])->name('cars.update');
 Route::delete('cars/{car}/delete', [App\Http\Controllers\CarsController::class, 'destroy'])->name('cars.destroy');
+
+//daamge roots
+Route::get('car/{car}/damage_type', [App\Http\Controllers\DamageController::class, 'damage_type'])->name('cars.damage_type');
+Route::get('car/{car}/hail_damage', [App\Http\Controllers\DamageController::class, 'damage_hail'])->name('cars.damage_hail');
+Route::post('damage_hail/{car}/store', [App\Http\Controllers\DamageController::class, 'damage_hail_store'])->name('damage_hail.store');
+
+

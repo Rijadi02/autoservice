@@ -2,84 +2,53 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cars;
 use App\Models\Damage;
 use Illuminate\Http\Request;
 
 class DamageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+
+    public function damage_hail(Cars $car){
+        return view('damage_hail', compact('car'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+
+    public function damage_type(Cars $car){
+        return view('damage_type', compact('car'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+    public function damage_hail_store(Cars $car, Request $request){
+        dd($request);
+        $data = request()->validate(
+            [
+                '' => ['required'],
+                'chassis' => ['required'],
+                'body_type' => ['required'],
+                'brand' => ['required'],
+                'model' => ['required'],
+                'color' => ['required'],
+                'year' => [''],
+                'fuel' => [''],
+                'weight' => [''],
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Damage  $damage
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Damage $damage)
-    {
-        //
-    }
+            ]
+        );
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Damage  $damage
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Damage $damage)
-    {
-        //
-    }
+        $car = new \App\Models\Cars();
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Damage  $damage
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Damage $damage)
-    {
-        //
-    }
+        $car->license = $data['license'];
+        $car->chassis = $data['chassis'];
+        $car->body_type = $data['body_type'];
+        $car->brand = $data['brand'];
+        $car->model = $data['model'];
+        $car->color = $data['color'];
+        $car->year = $data['year'];
+        $car->fuel = $data['fuel'];
+        $car->weight = $data['weight'];
+        $car->client_id = $client->id;
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Damage  $damage
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Damage $damage)
-    {
-        //
+        $car->save();
+        return redirect('/cars');
     }
 }

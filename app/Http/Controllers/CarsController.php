@@ -21,7 +21,7 @@ class CarsController extends Controller
     }
 
 
-    public function store()
+    public function store(Client $client)
     {
         $data = request()->validate(
             [
@@ -34,7 +34,7 @@ class CarsController extends Controller
                 'year' => [''],
                 'fuel' => [''],
                 'weight' => [''],
-                'client_id' => ['required']
+
             ]
         );
 
@@ -49,10 +49,10 @@ class CarsController extends Controller
         $car->year = $data['year'];
         $car->fuel = $data['fuel'];
         $car->weight = $data['weight'];
-        $car->client_id = $data['client_id'];
+        $car->client_id = $client->id;
 
         $car->save();
-        return redirect('/cars');
+        return redirect()->route('cars.damage_type', $car->id);
     }
 
     public function update(Cars $car)
@@ -68,7 +68,6 @@ class CarsController extends Controller
                 'year' => [''],
                 'fuel' => [''],
                 'weight' => [''],
-                'client_id' => ['required']
             ]
         );
 
@@ -83,12 +82,11 @@ class CarsController extends Controller
         $car->year = $data['year'];
         $car->fuel = $data['fuel'];
         $car->weight = $data['weight'];
-        $car->client_id = $data['client_id'];
 
         if ($car->isDirty('license')) {
-            session()->flash('client-updated', 'Client updated: ' . request('name'));
+            session()->flash('car-updated', 'Car updated: ' . request('brand'));
         } else {
-            session()->flash('client-updated', 'Nothing to add: ' . request('name'));
+            session()->flash('car-updated', 'Nothing to add: ' . request('brand'));
         }
         $car->save();
 
@@ -105,6 +103,9 @@ class CarsController extends Controller
     {
         $car->delete();
         session()->flash('car-deleted', 'Car deleted: ' . $car->title);
-        return redirect('/clients');
+        return redirect('/cars');
     }
+
+
+
 }
