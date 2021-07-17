@@ -4,24 +4,23 @@
 
   .button {
     display: inline-block;
-    width: 4%;
+    width: 3em;
   }
 
   .scrollmenu {
 
-    overflow: hidden;
+    overflow-x: hidden;
     white-space: nowrap;
     display: inline-block;
     flex: 1;
   }
 
-  div.scrollmenu a {
+  div.scrollmenu div {
     display: inline-block;
-    padding: 100px;
   }
 
-  div.scrollmenu a:hover {
-    background-color: #777;
+  div.scrollmenu div:hover {
+    transform: translateY(-5px);
   }
 
     .radio-hidden {
@@ -32,14 +31,21 @@
   }
 
   /* IMAGE STYLES */
-  .radio-hidden + img {
+  .radio-hidden + div {
     cursor: pointer;
+
   }
 
   /* CHECKED STYLES */
-  .radio-hidden:checked + img {
-    outline: 2px solid #f00;
+  .radio-hidden:checked + div img {
+    opacity: 0.5;
   }
+
+  .radio-hidden:checked + div h5 {
+    color : #6900c7;
+    font-weight: 700;
+  }
+
 
 
 

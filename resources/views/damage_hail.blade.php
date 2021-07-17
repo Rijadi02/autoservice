@@ -65,149 +65,107 @@
                                             </div>
 
                                             <div class="scroll">
-                                                <button class="button" type="button" onclick="move(-200)">&#10094;</button>
+                                                <button class="button btn btn-light mx-2" type="button"
+                                                    onclick="move(-200)">&#10094;</button>
                                                 <div class="scrollmenu" id="s">
+
+
                                                     <label>
-                                                        <input type="radio" class="radio-hidden" name="test" value="dach"
-                                                            checked>
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/dach.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Dach</p>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" class="radio-hidden" name="test"
-                                                            value="dachholmright">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Dach Holm r.</p>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="test" value="motorhube"
+                                                        <input type="radio" name="test" value="seitenwandbackright"
                                                             class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/motorhaube.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Motorhaube</p>
+                                                        <div class="card mx-1 shadow-none bg-light">
+                                                            <img class="card-img"
+                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
+                                                                alt="...">
+                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
+                                                        </div>
                                                     </label>
+
                                                     <label>
-                                                        <input type="radio" name="test" value="kotfluegelfrontright"
+                                                        <input type="radio" name="test" value="seitenwandbackright"
                                                             class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/kotfluegelfrontright.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Kotfluegel vo. re.</p>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="test" value="tuerfrontright"
-                                                            class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerfrontright.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Tur .vo .re</p>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="test" value="tuerbackright"
-                                                            class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerbackright.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Tur .he .re</p>
+                                                        <div class="card mx-1 shadow-none bg-light">
+                                                            <img class="card-img"
+                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
+                                                                alt="...">
+                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
+                                                        </div>
                                                     </label>
                                                     <label>
                                                         <input type="radio" name="test" value="seitenwandbackright"
                                                             class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Seitenwand .vo .re</p>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="test" value="kofferraumdeckel"
+                                                        <div class="card mx-1 shadow-none bg-light">
+                                                            <img class="card-img"
+                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
+                                                                alt="...">
+                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
+                                                        </div>
+                                                    </label><label>
+                                                        <input type="radio" name="test" value="seitenwandbackright"
                                                             class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/kofferraumdeckel.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Kofferraumdeckel</p>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="test" value="heckklappe"
+                                                        <div class="card mx-1 shadow-none bg-light">
+                                                            <img class="card-img"
+                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
+                                                                alt="...">
+                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
+                                                        </div>
+                                                    </label><label>
+                                                        <input type="radio" name="test" value="seitenwandbackright"
                                                             class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/heckklappe.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Heckklappe</p>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="test" value="heckklappenspoiler"
+                                                        <div class="card mx-1 shadow-none bg-light">
+                                                            <img class="card-img"
+                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
+                                                                alt="...">
+                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
+                                                        </div>
+                                                    </label><label>
+                                                        <input type="radio" name="test" value="seitenwandbackright"
                                                             class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/heckklappenspoiler.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Heckklappe Oberseite</p>
+                                                        <div class="card mx-1 shadow-none bg-light">
+                                                            <img class="card-img"
+                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
+                                                                alt="...">
+                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
+                                                        </div>
+                                                    </label><label>
+                                                        <input type="radio" name="test" value="seitenwandbackright"
+                                                            class="radio-hidden">
+                                                        <div class="card mx-1 shadow-none bg-light">
+                                                            <img class="card-img"
+                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
+                                                                alt="...">
+                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
+                                                        </div>
                                                     </label>
 
-                                                    <label>
-                                                        <input type="radio" class="radio-hidden" name="test"
-                                                            value="dachholmright">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Dach Holm r.</p>
-                                                    </label>
-
-                                                    <label>
-                                                        <input type="radio" name="test" value="kotfluegelfrontright"
-                                                            class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/kotfluegelfrontright.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Kotfluegel vo. re.</p>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="test" value="tuerfrontright"
-                                                            class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerfrontright.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Tur .vo .le</p>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="test" value="tuerbackright"
-                                                            class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerbackright.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Tur .he .le</p>
-                                                    </label>
                                                     <label>
                                                         <input type="radio" name="test" value="seitenwandbackright"
                                                             class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            Seitenwand .vo .le</p>
+                                                        <div class="card mx-1 shadow-none bg-light">
+                                                            <img class="card-img"
+                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
+                                                                alt="...">
+                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
+                                                        </div>
                                                     </label>
+
+                                                    <label>
+                                                        <input type="radio" name="test" value="seitenwandbackright"
+                                                            class="radio-hidden">
+                                                        <div class="card mx-1 shadow-none bg-light">
+                                                            <img class="card-img"
+                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
+                                                                alt="...">
+                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
+                                                        </div>
+                                                    </label>
+
+
 
 
                                                 </div>
-                                                <button type="button" class="button" onclick="move(200)">&#10095;</button>
+                                                <button type="button" class="button btn btn-light mx-2"
+                                                    onclick="move(200)">&#10095;</button>
                                             </div>
 
                                             <div class="col-lg-12 mt-3 text-center">
@@ -281,8 +239,8 @@
                                                 </label>
                                             </div>
 
-
-                                            <button class="btn btn-primary" type="submit">Add Damage</button>
+                                            <button class="btn-lg btn float-right btn-primary mx-1 mt-3" type="submit">Continue</button>
+                                            <button class="btn-lg btn float-right btn-light mx-1 mt-3" type="submit">Add Damage &nbsp; <i class="fa fa-plus-circle"></i> </button>
                                         </form>
                                     </div>
                                 </div>
