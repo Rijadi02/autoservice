@@ -15,10 +15,9 @@ class DamageController extends Controller
 
     public function damage_hail(Cars $car){
         $parts = BodyPart::all();
-        $hole_number = HoleNumber::all();
-        $hole_type = HoleType::all();
-
-        return view('damage_hail', compact('car','parts','hole_number','hole_type'));
+        $hole_numbers = HoleNumber::all();
+        $hole_types = HoleType::all();
+        return view('damage_hail', compact('car','parts','hole_numbers','hole_types'));
     }
 
 
@@ -41,7 +40,7 @@ class DamageController extends Controller
         $damage->body_part = $data['body_part'];
         $damage->hole_type = $data['hole_type'];
         $damage->hole_number = $data['hole_number'];
-        $damage->car_id = $car->id;
+        $damage->cars_id = $car->id;
         $damage->save();
 
 

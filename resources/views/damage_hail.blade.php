@@ -69,100 +69,16 @@
                                                     onclick="move(-200)">&#10094;</button>
                                                 <div class="scrollmenu" id="s">
 
-
-                                                    <label>
-                                                        <input type="radio" name="test" value="seitenwandbackright"
-                                                            class="radio-hidden">
-                                                        <div class="card mx-1 shadow-none bg-light">
-                                                            <img class="card-img"
-                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
-                                                                alt="...">
-                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
-                                                        </div>
-                                                    </label>
-
-                                                    <label>
-                                                        <input type="radio" name="test" value="seitenwandbackright"
-                                                            class="radio-hidden">
-                                                        <div class="card mx-1 shadow-none bg-light">
-                                                            <img class="card-img"
-                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
-                                                                alt="...">
-                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
-                                                        </div>
-                                                    </label>
-                                                    <label>
-                                                        <input type="radio" name="test" value="seitenwandbackright"
-                                                            class="radio-hidden">
-                                                        <div class="card mx-1 shadow-none bg-light">
-                                                            <img class="card-img"
-                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
-                                                                alt="...">
-                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
-                                                        </div>
-                                                    </label><label>
-                                                        <input type="radio" name="test" value="seitenwandbackright"
-                                                            class="radio-hidden">
-                                                        <div class="card mx-1 shadow-none bg-light">
-                                                            <img class="card-img"
-                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
-                                                                alt="...">
-                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
-                                                        </div>
-                                                    </label><label>
-                                                        <input type="radio" name="test" value="seitenwandbackright"
-                                                            class="radio-hidden">
-                                                        <div class="card mx-1 shadow-none bg-light">
-                                                            <img class="card-img"
-                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
-                                                                alt="...">
-                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
-                                                        </div>
-                                                    </label><label>
-                                                        <input type="radio" name="test" value="seitenwandbackright"
-                                                            class="radio-hidden">
-                                                        <div class="card mx-1 shadow-none bg-light">
-                                                            <img class="card-img"
-                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
-                                                                alt="...">
-                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
-                                                        </div>
-                                                    </label><label>
-                                                        <input type="radio" name="test" value="seitenwandbackright"
-                                                            class="radio-hidden">
-                                                        <div class="card mx-1 shadow-none bg-light">
-                                                            <img class="card-img"
-                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
-                                                                alt="...">
-                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
-                                                        </div>
-                                                    </label>
-
-                                                    <label>
-                                                        <input type="radio" name="test" value="seitenwandbackright"
-                                                            class="radio-hidden">
-                                                        <div class="card mx-1 shadow-none bg-light">
-                                                            <img class="card-img"
-                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
-                                                                alt="...">
-                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
-                                                        </div>
-                                                    </label>
-
-                                                    <label>
-                                                        <input type="radio" name="body_part" value="17"
-                                                            class="radio-hidden">
-                                                        <div class="card mx-1 shadow-none bg-light">
-                                                            <img class="card-img"
-                                                                src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg"
-                                                                alt="...">
-                                                            <h5 class="card-title px-3 pt-3">Seitenwand .vo .le</h5>
-                                                        </div>
-                                                    </label>
-
-
-
-
+                                                    @foreach ($parts as $part)
+                                                        <label>
+                                                            <input type="radio" name="body_part" value="{{ $part->id }}"
+                                                                class="radio-hidden">
+                                                            <div class="card mx-1 shadow-none bg-light">
+                                                                <img class="card-img" src="{{ $part->image }}" alt="...">
+                                                                <h5 class="card-title px-3 pt-3">{{ $part->name }}</h5>
+                                                            </div>
+                                                        </label>
+                                                    @endforeach
                                                 </div>
                                                 <button type="button" class="button btn btn-light mx-2"
                                                     onclick="move(200)">&#10095;</button>
@@ -173,18 +89,15 @@
                                             </div>
 
                                             <div class="col-lg-12 text-center mt-3">
-                                                <label for="f-option" class="l-radio">
-                                                    <input type="radio" id="f-option" name="hole_type" value="1" tabindex="1">
-                                                    <span>groß ( 30-45 mm )</span>
-                                                </label>
-                                                <label for="s-option" class="l-radio">
-                                                    <input type="radio" id="s-option" name="hole_type" value="2"  tabindex="2">
-                                                    <span>mittel ( 20-30 mm )</span>
-                                                </label>
-                                                <label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="hole_type" value="3" tabindex="3">
-                                                    <span>klein ( bis 20 mm )</span>
-                                                </label>
+
+
+                                                @foreach ($hole_types as $hole_type)
+                                                    <label for="{{ $hole_type->name }}" class="l-radio">
+                                                        <input type="radio" id="{{ $hole_type->name }}" name="hole_type"
+                                                            value="{{ $hole_type->id }}" tabindex="3">
+                                                        <span>{{ $hole_type->name }}</span>
+                                                    </label>
+                                                @endforeach
                                             </div>
 
                                             <div class="col-lg-12 mt-3 text-center">
@@ -192,66 +105,104 @@
                                             </div>
 
                                             <div class="col-lg-12 text-center mt-3">
-                                                <label for="1" class="l-radio">
-                                                    <input type="radio" id="1" name="hole_number" value="1" value="1" tabindex="1">
-                                                    <span>1</span>
-                                                </label>
-                                                <label for="2_3" class="l-radio">
-                                                    <input type="radio" id="2_3" name="hole_number" value="2" tabindex="2">
-                                                    <span>2-3</span>
-                                                </label>
-                                                <label for="4_6" class="l-radio">
-                                                    <input type="radio" id="4_6" name="hole_number" value="3"  tabindex="3">
-                                                    <span>4-6</span>
-                                                </label>
-                                                <label for="7_10" class="l-radio">
-                                                    <input type="radio" id="7_10" name="hole_number" value="4" tabindex="3">
-                                                    <span>7-10</span>
-                                                </label>
-                                                <label for="11_15" class="l-radio">
-                                                    <input type="radio" id="11_15" name="hole_number" value="5" tabindex="3">
-                                                    <span>11-15</span>
-                                                </label>
-                                                <label for="16_20" class="l-radio">
-                                                    <input type="radio" id="16_20" name="hole_number" value="6" tabindex="3">
-                                                    <span>16-20</span>
-                                                </label><label for="21_25" class="l-radio">
-                                                    <input type="radio" id="21_25" name="hole_number" value="7" tabindex="3">
-                                                    <span>21-25</span>
-                                                </label><label for="26_30" class="l-radio">
-                                                    <input type="radio" id="26_30" name="hole_number" value="8" tabindex="3">
-                                                    <span>26-30</span>
-                                                </label><label for="31_40" class="l-radio">
-                                                    <input type="radio" id="31_40" name="hole_number" value="9" tabindex="3">
-                                                    <span>31-40</span>
-                                                </label><label for="41_50" class="l-radio">
-                                                    <input type="radio" id="41_50" name="hole_number" value="10" tabindex="3">
-                                                    <span>41-50</span>
-                                                </label><label for="51_60" class="l-radio">
-                                                    <input type="radio" id="51_60" name="hole_number" value="11" tabindex="3">
-                                                    <span>51-60</span>
-                                                </label><label for="61_80" class="l-radio">
-                                                    <input type="radio" id="61_80" name="hole_number" value="12" tabindex="3">
-                                                    <span>61-80</span>
-                                                </label><label for="81_100" class="l-radio">
-                                                    <input type="radio" id="81_100" name="hole_number" value="13" tabindex="3">
-                                                    <span>81-100</span>
-                                                </label>
+                                                @foreach ($hole_numbers as $hole_number)
+                                                    <label for="{{ $hole_number->name }}" class="l-radio">
+                                                        <input type="radio" id="{{ $hole_number->name }}" name="hole_number"
+                                                            value="{{ $hole_number->id }}" tabindex="1">
+                                                        <span>{{ $hole_number->name }}</span>
+                                                    </label>
+                                                @endforeach
+
+
                                             </div>
 
-                                            <button class="btn-lg btn float-right btn-primary mx-1 mt-3" type="submit">Continue</button>
-                                            <button class="btn-lg btn float-right btn-light mx-1 mt-3" type="submit">Add Damage &nbsp; <i class="fa fa-plus-circle"></i> </button>
+                                            <div class="col-lg-12 mt-3 text-center">
+                                                <h3>All Damages</h3>
+                                            </div>
+
+
+                                            <table class="table table-bordered table-hover overflow-auto"
+                                                style="overflow: auto;" id="dataTable" width="100%" cellspacing="0">
+                                                <thead>
+                                                <tr>
+                                                    <th>Body Part</th>
+                                                    <th>Holes Type</th>
+                                                    <th>Number of holes</th>
+                                                    <th>Actions</th>
+
+                                                </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    @foreach ($car->damages as $damage)
+                                                        <tr>
+                                                            <td>{{ $damage->body_part->name }}</td>
+                                                            <td>{{ $damage->hole_type }}</td>
+                                                            <td>{{ $damage->hole_number }}</td>
+
+                                                            <td>
+
+                                                                <div class="modal fade" id="id{{ $car->id }}"
+                                                                    tabindex="-1" role="dialog"
+                                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                    <div class="modal-dialog" role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <h5 class="modal-title"
+                                                                                    id="exampleModalLabel">Delete Category
+                                                                                </h5>
+                                                                                <button class="close" type="button"
+                                                                                    data-dismiss="modal"
+                                                                                    aria-label="Close"><span
+                                                                                        aria-hidden="true">×</span></button>
+                                                                            </div>
+                                                                            <div class="modal-body">This will delete the
+                                                                                selected car and all
+                                                                                the data associated with it!</div>
+                                                                            <div class="modal-footer"><button
+                                                                                    class="btn btn-secondary" type="button"
+                                                                                    data-dismiss="modal">Close</button>
+
+
+                                                                                <form method="POST"
+                                                                                    action="{{ route('cars.destroy', $car->id) }}">
+                                                                                    @csrf
+                                                                                    @method('DELETE')
+                                                                                    <button class="btn btn-danger"
+                                                                                        type="submit">Delete</button>
+                                                                            </div>
                                         </form>
                                     </div>
                                 </div>
                             </div>
 
+                            <a href="" class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal"
+                                data-target="#id{{ $car->id }}"><i data-feather="trash-2"></i></a>
+
+                            </td>
+
+
+
+                            </tr>
+                            @endforeach
+
+                            </tbody>
+                            </table>
+
+                            <button class="btn-lg btn float-right btn-primary mx-1 mt-3" type="submit">Continue</button>
+                            <button class="btn-lg btn float-right btn-light mx-1 mt-3" type="submit">Add Damage &nbsp; <i
+                                    class="fa fa-plus-circle"></i> </button>
+                            </form>
                         </div>
                     </div>
                 </div>
+
             </div>
+        </div>
+        </div>
+        </div>
 
 
-        @endsection
+    @endsection
 
 </x-home-master>

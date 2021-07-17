@@ -15,8 +15,8 @@ class CreateDamagesTable extends Migration
     {
         Schema::create('damages', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('car_id')->unsigned();
-            $table->foreign('car_id')->references('id')->on("cars")->onDelete("cascade");
+            $table->integer('cars_id')->unsigned();
+            $table->foreign('cars_id')->references('id')->on("cars")->onDelete("cascade");
             $table->integer('damage_type');
 
             $table->integer('body_part')->unsigned()->nullable();

@@ -15,7 +15,7 @@ class CreateHoleNumbersTable extends Migration
     {
         Schema::create('hole_numbers', function (Blueprint $table) {
             $table->increments("id");
-            $table->integer("name");
+            $table->string("name");
             $table->integer("holes")->nullable();
             $table->integer("price")->nullable();
 
