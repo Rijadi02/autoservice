@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cars;
 use App\Models\Damage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class DamageController extends Controller
 {
@@ -19,36 +20,25 @@ class DamageController extends Controller
     }
 
     public function damage_hail_store(Cars $car, Request $request){
-        dd($request);
         $data = request()->validate(
             [
-                '' => ['required'],
-                'chassis' => ['required'],
-                'body_type' => ['required'],
-                'brand' => ['required'],
-                'model' => ['required'],
-                'color' => ['required'],
-                'year' => [''],
-                'fuel' => [''],
-                'weight' => [''],
-
+                'body_part' => ['required'],
+                'hole_type' => ['required'],
+                'hole_number' => ['required'],
             ]
         );
 
-        $car = new \App\Models\Cars();
+        $damage = new \App\Models\Damage();
 
-        $car->license = $data['license'];
-        $car->chassis = $data['chassis'];
-        $car->body_type = $data['body_type'];
-        $car->brand = $data['brand'];
-        $car->model = $data['model'];
-        $car->color = $data['color'];
-        $car->year = $data['year'];
-        $car->fuel = $data['fuel'];
-        $car->weight = $data['weight'];
-        $car->client_id = $client->id;
+        $damage->damage_type = 1;
+        $damage->body_part = $data['body_part'];
+        $damage->hole_type = $data['hole_type'];
+        $damage->hole_number = $data['hole_number'];
+        $damage->car_id = $car->id;
+        $damage->save();
 
-        $car->save();
-        return redirect('/cars');
+
+        return Redirect::route('cars.damage_hail',array('car' => $car->id));
+
     }
 }

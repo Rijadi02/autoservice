@@ -68,7 +68,7 @@
                                                 <button class="button" type="button" onclick="move(-200)">&#10094;</button>
                                                 <div class="scrollmenu" id="s">
                                                     <label>
-                                                        <input type="radio" class="radio-hidden" name="test" value="dach"
+                                                        <input type="radio" class="radio-hidden" name="body_part" value="1"
                                                             checked>
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/dach.jpg">
@@ -77,8 +77,8 @@
                                                             Dach</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" class="radio-hidden" name="test"
-                                                            value="dachholmright">
+                                                        <input type="radio" class="radio-hidden" name="body_part"
+                                                            value="2">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
                                                         <p
@@ -86,7 +86,7 @@
                                                             Dach Holm r.</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="motorhube"
+                                                        <input type="radio" name="body_part" value="3"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/motorhaube.jpg">
@@ -95,7 +95,7 @@
                                                             Motorhaube</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="kotfluegelfrontright"
+                                                        <input type="radio" name="body_part" value="4"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/kotfluegelfrontright.jpg">
@@ -104,7 +104,7 @@
                                                             Kotfluegel vo. re.</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="tuerfrontright"
+                                                        <input type="radio" name="body_part" value="5"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerfrontright.jpg">
@@ -113,7 +113,7 @@
                                                             Tur .vo .re</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="tuerbackright"
+                                                        <input type="radio" name="body_part" value="6"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerbackright.jpg">
@@ -122,7 +122,7 @@
                                                             Tur .he .re</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="seitenwandbackright"
+                                                        <input type="radio" name="body_part" value="7"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg">
@@ -131,7 +131,7 @@
                                                             Seitenwand .vo .re</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="kofferraumdeckel"
+                                                        <input type="radio" name="body_part" value="8"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/kofferraumdeckel.jpg">
@@ -140,7 +140,7 @@
                                                             Kofferraumdeckel</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="heckklappe"
+                                                        <input type="radio" name="body_part" value="9"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/heckklappe.jpg">
@@ -149,7 +149,7 @@
                                                             Heckklappe</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="heckklappenspoiler"
+                                                        <input type="radio" name="body_part" value="10"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/heckklappenspoiler.jpg">
@@ -159,8 +159,8 @@
                                                     </label>
 
                                                     <label>
-                                                        <input type="radio" class="radio-hidden" name="test"
-                                                            value="dachholmright">
+                                                        <input type="radio" class="radio-hidden" name="body_part"
+                                                            value="13">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
                                                         <p
@@ -169,7 +169,7 @@
                                                     </label>
 
                                                     <label>
-                                                        <input type="radio" name="test" value="kotfluegelfrontright"
+                                                        <input type="radio" name="body_part" value="14"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/kotfluegelfrontright.jpg">
@@ -178,7 +178,7 @@
                                                             Kotfluegel vo. re.</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="tuerfrontright"
+                                                        <input type="radio" name="body_part" value="15"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerfrontright.jpg">
@@ -187,7 +187,7 @@
                                                             Tur .vo .le</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="tuerbackright"
+                                                        <input type="radio" name="body_part" value="16"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerbackright.jpg">
@@ -196,7 +196,7 @@
                                                             Tur .he .le</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="seitenwandbackright"
+                                                        <input type="radio" name="body_part" value="17"
                                                             class="radio-hidden">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg">
@@ -216,15 +216,15 @@
 
                                             <div class="col-lg-12 text-center mt-3">
                                                 <label for="f-option" class="l-radio">
-                                                    <input type="radio" id="f-option" name="size" tabindex="1">
+                                                    <input type="radio" id="f-option" name="hole_type" value="1" tabindex="1">
                                                     <span>groß ( 30-45 mm )</span>
                                                 </label>
                                                 <label for="s-option" class="l-radio">
-                                                    <input type="radio" id="s-option" name="size" tabindex="2">
+                                                    <input type="radio" id="s-option" name="hole_type" value="2"  tabindex="2">
                                                     <span>mittel ( 20-30 mm )</span>
                                                 </label>
                                                 <label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
+                                                    <input type="radio" id="t-option" name="hole_type" value="3" tabindex="3">
                                                     <span>klein ( bis 20 mm )</span>
                                                 </label>
                                             </div>
@@ -235,48 +235,48 @@
 
                                             <div class="col-lg-12 text-center mt-3">
                                                 <label for="1" class="l-radio">
-                                                    <input type="radio" id="1" name="count" tabindex="1">
+                                                    <input type="radio" id="1" name="hole_number" value="1" value="1" tabindex="1">
                                                     <span>1</span>
                                                 </label>
                                                 <label for="2_3" class="l-radio">
-                                                    <input type="radio" id="2_3" name="count" tabindex="2">
+                                                    <input type="radio" id="2_3" name="hole_number" value="2" tabindex="2">
                                                     <span>2-3</span>
                                                 </label>
                                                 <label for="4_6" class="l-radio">
-                                                    <input type="radio" id="4_6" name="count" tabindex="3">
+                                                    <input type="radio" id="4_6" name="hole_number" value="3"  tabindex="3">
                                                     <span>4-6</span>
                                                 </label>
                                                 <label for="7_10" class="l-radio">
-                                                    <input type="radio" id="7_10" name="count" tabindex="3">
+                                                    <input type="radio" id="7_10" name="hole_number" value="4" tabindex="3">
                                                     <span>7-10</span>
                                                 </label>
                                                 <label for="11_15" class="l-radio">
-                                                    <input type="radio" id="11_15" name="count" tabindex="3">
+                                                    <input type="radio" id="11_15" name="hole_number" value="5" tabindex="3">
                                                     <span>11-15</span>
                                                 </label>
                                                 <label for="16_20" class="l-radio">
-                                                    <input type="radio" id="16_20" name="count" tabindex="3">
+                                                    <input type="radio" id="16_20" name="hole_number" value="6" tabindex="3">
                                                     <span>16-20</span>
                                                 </label><label for="21_25" class="l-radio">
-                                                    <input type="radio" id="21_25" name="count" tabindex="3">
+                                                    <input type="radio" id="21_25" name="hole_number" value="7" tabindex="3">
                                                     <span>21-25</span>
                                                 </label><label for="26_30" class="l-radio">
-                                                    <input type="radio" id="26_30" name="count" tabindex="3">
+                                                    <input type="radio" id="26_30" name="hole_number" value="8" tabindex="3">
                                                     <span>26-30</span>
                                                 </label><label for="31_40" class="l-radio">
-                                                    <input type="radio" id="31_40" name="count" tabindex="3">
+                                                    <input type="radio" id="31_40" name="hole_number" value="9" tabindex="3">
                                                     <span>31-40</span>
                                                 </label><label for="41_50" class="l-radio">
-                                                    <input type="radio" id="41_50" name="count" tabindex="3">
+                                                    <input type="radio" id="41_50" name="hole_number" value="10" tabindex="3">
                                                     <span>41-50</span>
                                                 </label><label for="51_60" class="l-radio">
-                                                    <input type="radio" id="51_60" name="count" tabindex="3">
+                                                    <input type="radio" id="51_60" name="hole_number" value="11" tabindex="3">
                                                     <span>51-60</span>
                                                 </label><label for="61_80" class="l-radio">
-                                                    <input type="radio" id="61_80" name="count" tabindex="3">
+                                                    <input type="radio" id="61_80" name="hole_number" value="12" tabindex="3">
                                                     <span>61-80</span>
                                                 </label><label for="81_100" class="l-radio">
-                                                    <input type="radio" id="81_100" name="count" tabindex="3">
+                                                    <input type="radio" id="81_100" name="hole_number" value="13" tabindex="3">
                                                     <span>81-100</span>
                                                 </label>
                                             </div>

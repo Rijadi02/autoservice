@@ -18,9 +18,16 @@ class CreateDamagesTable extends Migration
             $table->integer('car_id')->unsigned();
             $table->foreign('car_id')->references('id')->on("cars")->onDelete("cascade");
             $table->integer('damage_type');
-            $table->integer('body_part')->nullable();
-            $table->integer('hole_type')->nullable();
-            $table->integer('hole_number')->nullable();
+
+            $table->integer('body_part')->unsigned()->nullable();
+            $table->foreign('body_part')->references('id')->on("body_parts")->onDelete("cascade");
+
+            $table->integer('hole_type')->unsigned()->nullable();
+            $table->foreign('hole_type')->references('id')->on("hole_types")->onDelete("cascade");
+
+            $table->integer('hole_number')->unsigned()->nullable();
+            $table->foreign('hole_number')->references('id')->on("hole_numbers")->onDelete("cascade");
+
             $table->integer('hail_damage')->nullable();
             $table->integer('parking_damage')->nullable();
             $table->integer('disassambly')->nullable();
