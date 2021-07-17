@@ -68,70 +68,144 @@
                                                 <button class="button" type="button" onclick="move(-200)">&#10094;</button>
                                                 <div class="scrollmenu" id="s">
                                                     <label>
-                                                        <input type="radio" class="radio-hidden" name="test" value="small"
+                                                        <input type="radio" class="radio-hidden" name="test" value="dach"
                                                             checked>
                                                         <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/dach.jpg">
                                                         <p
                                                             style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            hello</p>
+                                                            Dach</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" class="radio-hidden" name="test" value="small">
+                                                        <input type="radio" class="radio-hidden" name="test"
+                                                            value="dachholmright">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
                                                         <p
                                                             style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            hello</p>
+                                                            Dach Holm r.</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="small" class="radio-hidden">
+                                                        <input type="radio" name="test" value="motorhube"
+                                                            class="radio-hidden">
+                                                        <img
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/motorhaube.jpg">
+                                                        <p
+                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
+                                                            Motorhaube</p>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="test" value="kotfluegelfrontright"
+                                                            class="radio-hidden">
+                                                        <img
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/kotfluegelfrontright.jpg">
+                                                        <p
+                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
+                                                            Kotfluegel vo. re.</p>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="test" value="tuerfrontright"
+                                                            class="radio-hidden">
+                                                        <img
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerfrontright.jpg">
+                                                        <p
+                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
+                                                            Tur .vo .re</p>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="test" value="tuerbackright"
+                                                            class="radio-hidden">
+                                                        <img
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerbackright.jpg">
+                                                        <p
+                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
+                                                            Tur .he .re</p>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="test" value="seitenwandbackright"
+                                                            class="radio-hidden">
+                                                        <img
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg">
+                                                        <p
+                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
+                                                            Seitenwand .vo .re</p>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="test" value="kofferraumdeckel"
+                                                            class="radio-hidden">
+                                                        <img
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/kofferraumdeckel.jpg">
+                                                        <p
+                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
+                                                            Kofferraumdeckel</p>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="test" value="heckklappe"
+                                                            class="radio-hidden">
+                                                        <img
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/heckklappe.jpg">
+                                                        <p
+                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
+                                                            Heckklappe</p>
+                                                    </label>
+                                                    <label>
+                                                        <input type="radio" name="test" value="heckklappenspoiler"
+                                                            class="radio-hidden">
+                                                        <img
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/heckklappenspoiler.jpg">
+                                                        <p
+                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
+                                                            Heckklappe Oberseite</p>
+                                                    </label>
+
+                                                    <label>
+                                                        <input type="radio" class="radio-hidden" name="test"
+                                                            value="dachholmright">
                                                         <img
                                                             src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
                                                         <p
                                                             style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            hello</p>
+                                                            Dach Holm r.</p>
                                                     </label>
+
                                                     <label>
-                                                        <input type="radio" name="test" value="small" class="radio-hidden">
+                                                        <input type="radio" name="test" value="kotfluegelfrontright"
+                                                            class="radio-hidden">
                                                         <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/kotfluegelfrontright.jpg">
                                                         <p
                                                             style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            hello</p>
+                                                            Kotfluegel vo. re.</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="small" class="radio-hidden">
+                                                        <input type="radio" name="test" value="tuerfrontright"
+                                                            class="radio-hidden">
                                                         <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerfrontright.jpg">
                                                         <p
                                                             style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            hello</p>
+                                                            Tur .vo .le</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="small" class="radio-hidden">
+                                                        <input type="radio" name="test" value="tuerbackright"
+                                                            class="radio-hidden">
                                                         <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/tuerbackright.jpg">
                                                         <p
                                                             style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            hello</p>
+                                                            Tur .he .le</p>
                                                     </label>
                                                     <label>
-                                                        <input type="radio" name="test" value="small" class="radio-hidden">
+                                                        <input type="radio" name="test" value="seitenwandbackright"
+                                                            class="radio-hidden">
                                                         <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
+                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/seitenwandbackright.jpg">
                                                         <p
                                                             style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            hello</p>
+                                                            Seitenwand .vo .le</p>
                                                     </label>
-                                                    <label>
-                                                        <input type="radio" name="test" value="small" class="radio-hidden">
-                                                        <img
-                                                            src="http://hagelrechner.com/css/dellenrechner/images/parts/dachholmright.jpg">
-                                                        <p
-                                                            style="width: 100%; color: white; background-color: black; padding: 10px; text-align: center">
-                                                            hello</p>
-                                                    </label>
+
+
                                                 </div>
                                                 <button type="button" class="button" onclick="move(200)">&#10095;</button>
                                             </div>
@@ -160,74 +234,50 @@
                                             </div>
 
                                             <div class="col-lg-12 text-center mt-3">
-                                                <label for="f-option" class="l-radio">
-                                                    <input type="radio" id="f-option" name="size" tabindex="1">
+                                                <label for="1" class="l-radio">
+                                                    <input type="radio" id="1" name="count" tabindex="1">
                                                     <span>1</span>
                                                 </label>
-                                                <label for="s-option" class="l-radio">
-                                                    <input type="radio" id="s-option" name="size" tabindex="2">
+                                                <label for="2_3" class="l-radio">
+                                                    <input type="radio" id="2_3" name="count" tabindex="2">
                                                     <span>2-3</span>
                                                 </label>
-                                                <label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
+                                                <label for="4_6" class="l-radio">
+                                                    <input type="radio" id="4_6" name="count" tabindex="3">
                                                     <span>4-6</span>
                                                 </label>
-                                                <label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
+                                                <label for="7_10" class="l-radio">
+                                                    <input type="radio" id="7_10" name="count" tabindex="3">
+                                                    <span>7-10</span>
                                                 </label>
-                                                <label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
-                                                </label><label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
+                                                <label for="11_15" class="l-radio">
+                                                    <input type="radio" id="11_15" name="count" tabindex="3">
+                                                    <span>11-15</span>
                                                 </label>
-                                                <label for="t-option" class="l-radio">
-                                                    <input type="radio" id="t-option" name="size" tabindex="3">
-                                                    <span>4-6</span>
+                                                <label for="16_20" class="l-radio">
+                                                    <input type="radio" id="16_20" name="count" tabindex="3">
+                                                    <span>16-20</span>
+                                                </label><label for="21_25" class="l-radio">
+                                                    <input type="radio" id="21_25" name="count" tabindex="3">
+                                                    <span>21-25</span>
+                                                </label><label for="26_30" class="l-radio">
+                                                    <input type="radio" id="26_30" name="count" tabindex="3">
+                                                    <span>26-30</span>
+                                                </label><label for="31_40" class="l-radio">
+                                                    <input type="radio" id="31_40" name="count" tabindex="3">
+                                                    <span>31-40</span>
+                                                </label><label for="41_50" class="l-radio">
+                                                    <input type="radio" id="41_50" name="count" tabindex="3">
+                                                    <span>41-50</span>
+                                                </label><label for="51_60" class="l-radio">
+                                                    <input type="radio" id="51_60" name="count" tabindex="3">
+                                                    <span>51-60</span>
+                                                </label><label for="61_80" class="l-radio">
+                                                    <input type="radio" id="61_80" name="count" tabindex="3">
+                                                    <span>61-80</span>
+                                                </label><label for="81_100" class="l-radio">
+                                                    <input type="radio" id="81_100" name="count" tabindex="3">
+                                                    <span>81-100</span>
                                                 </label>
                                             </div>
 
