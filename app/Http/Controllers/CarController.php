@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cars;
+use App\Models\Car;
 use App\Models\Client;
 use Illuminate\Http\Request;
 
-class CarsController extends Controller
+class CarController extends Controller
 {
 
     public function __construct()
@@ -16,7 +16,7 @@ class CarsController extends Controller
 
     public function index(Client $client)
     {
-        $cars = Cars::all();
+        $cars = Car::all();
         return view('cars', compact('cars','client'));
     }
 
@@ -38,7 +38,7 @@ class CarsController extends Controller
             ]
         );
 
-        $car = new \App\Models\Cars();
+        $car = new \App\Models\Car();
 
         $car->license = $data['license'];
         $car->chassis = $data['chassis'];
@@ -55,7 +55,7 @@ class CarsController extends Controller
         return redirect()->route('cars.damage_type', $car->id);
     }
 
-    public function update(Cars $car)
+    public function update(Car $car)
     {
         $data = request()->validate(
             [
@@ -93,13 +93,13 @@ class CarsController extends Controller
         return redirect('/cars');
     }
 
-    public function edit(Cars $car)
+    public function edit(Car $car)
     {
-        $cars = Cars::all();
+        $cars = Car::all();
         return view('cars', compact('cars', 'car'));
     }
 
-    public function destroy(Cars $car)
+    public function destroy(Car $car)
     {
         $car->delete();
         session()->flash('car-deleted', 'Car deleted: ' . $car->title);

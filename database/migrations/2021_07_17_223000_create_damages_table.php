@@ -15,18 +15,18 @@ class CreateDamagesTable extends Migration
     {
         Schema::create('damages', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('cars_id')->unsigned();
-            $table->foreign('cars_id')->references('id')->on("cars")->onDelete("cascade");
+            $table->integer('car_id')->unsigned();
+            $table->foreign('car_id')->references('id')->on("cars")->onDelete("cascade");
             $table->integer('damage_type');
 
-            $table->integer('body_part')->unsigned()->nullable();
-            $table->foreign('body_part')->references('id')->on("body_parts")->onDelete("cascade");
+            $table->integer('part_id')->unsigned()->nullable();
+            $table->foreign('part_id')->references('id')->on("parts")->onDelete("cascade");
 
-            $table->integer('hole_type')->unsigned()->nullable();
-            $table->foreign('hole_type')->references('id')->on("hole_types")->onDelete("cascade");
+            $table->integer('type_id')->unsigned()->nullable();
+            $table->foreign('type_id')->references('id')->on("types")->onDelete("cascade");
 
-            $table->integer('hole_number')->unsigned()->nullable();
-            $table->foreign('hole_number')->references('id')->on("hole_numbers")->onDelete("cascade");
+            $table->integer('number_id')->unsigned()->nullable();
+            $table->foreign('number_id')->references('id')->on("numbers")->onDelete("cascade");
 
             $table->integer('hail_damage')->nullable();
             $table->integer('parking_damage')->nullable();

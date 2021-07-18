@@ -266,7 +266,7 @@
                                     <tr>
                                         <th>Name</th>
                                         <th>Register Car/Damage</th>
-                                        <th>All Cars/Damage</th>
+                                        <th>All Car/Damage</th>
                                         <th>Actions</th>
 
                                     </tr>
@@ -275,7 +275,7 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Register Car/Damage</th>
-                                            <th>All Cars/Damage</th>
+                                            <th>All Car/Damage</th>
 
                                             <th>Actions</th>
 

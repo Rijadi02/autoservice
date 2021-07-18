@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHoleTypesTable extends Migration
+class CreateNumbersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateHoleTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('hole_types', function (Blueprint $table) {
+        Schema::create('numbers', function (Blueprint $table) {
             $table->increments("id");
             $table->string("name");
-            $table->integer("price");
+            $table->integer("holes")->nullable();
+            $table->integer("price")->nullable();
+
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateHoleTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hole_types');
+        Schema::dropIfExists('numbers');
     }
 }

@@ -56,7 +56,7 @@
                                     <div class="col-xxl-8 col-xl-8">
                                         <h5 class="card-title text-center">Hail AW</h5>
                                         {{-- <h3 class="text-primary">{{ $client->name }}</h3> --}}
-                                        <form method="POST" action="{{ route('damage_hail.store', $car->id) }}"
+                                        <form method="POST" enctype="multipart/form-data" action="{{ route('damage_hail.store', $car->id) }}"
                                             enctype="multipart/form-data">
                                             @csrf
 
@@ -71,7 +71,7 @@
 
                                                     @foreach ($parts as $part)
                                                         <label>
-                                                            <input type="radio" name="body_part" value="{{ $part->id }}"
+                                                            <input type="radio" name="part" value="{{ $part->id }}"
                                                                 class="radio-hidden">
                                                             <div class="card mx-1 shadow-none bg-light">
                                                                 <img class="card-img" src="{{ $part->image }}" alt="...">
@@ -91,11 +91,11 @@
                                             <div class="col-lg-12 text-center mt-3">
 
 
-                                                @foreach ($hole_types as $hole_type)
-                                                    <label for="{{ $hole_type->name }}" class="l-radio">
-                                                        <input type="radio" id="{{ $hole_type->name }}" name="hole_type"
-                                                            value="{{ $hole_type->id }}" tabindex="3">
-                                                        <span>{{ $hole_type->name }}</span>
+                                                @foreach ($types as $type)
+                                                    <label for="{{ $type->name }}" class="l-radio">
+                                                        <input type="radio" id="{{ $type->name }}" name="type"
+                                                            value="{{ $type->id }}" tabindex="3">
+                                                        <span>{{ $type->name }}</span>
                                                     </label>
                                                 @endforeach
                                             </div>
@@ -105,11 +105,11 @@
                                             </div>
 
                                             <div class="col-lg-12 text-center mt-3">
-                                                @foreach ($hole_numbers as $hole_number)
-                                                    <label for="{{ $hole_number->name }}" class="l-radio">
-                                                        <input type="radio" id="{{ $hole_number->name }}" name="hole_number"
-                                                            value="{{ $hole_number->id }}" tabindex="1">
-                                                        <span>{{ $hole_number->name }}</span>
+                                                @foreach ($numbers as $number)
+                                                    <label for="{{ $number->name }}" class="l-radio">
+                                                        <input type="radio" id="{{ $number->name }}" name="number"
+                                                            value="{{ $number->id }}" tabindex="1">
+                                                        <span>{{ $number->name }}</span>
                                                     </label>
                                                 @endforeach
 
@@ -121,24 +121,24 @@
                                             </div>
 
 
-                                            <table class="table table-bordered table-hover overflow-auto"
+                                            <table class="table table-bordered table-hover overflow-auto mt-3"
                                                 style="overflow: auto;" id="dataTable" width="100%" cellspacing="0">
                                                 <thead>
-                                                <tr>
-                                                    <th>Body Part</th>
-                                                    <th>Holes Type</th>
-                                                    <th>Number of holes</th>
-                                                    <th>Actions</th>
+                                                    <tr>
+                                                        <th>Body Part</th>
+                                                        <th>Holes Type</th>
+                                                        <th>Number of holes</th>
+                                                        <th>Actions</th>
 
-                                                </tr>
+                                                    </tr>
                                                 </thead>
 
                                                 <tbody>
                                                     @foreach ($car->damages as $damage)
                                                         <tr>
-                                                            <td>{{ $damage->body_part->name }}</td>
-                                                            <td>{{ $damage->hole_type }}</td>
-                                                            <td>{{ $damage->hole_number }}</td>
+                                                            <td>{{ $damage->part->name }}</td>
+                                                            <td>{{ $damage->type->name }}</td>
+                                                            <td>{{ $damage->number->name }}</td>
 
                                                             <td>
 
@@ -164,14 +164,14 @@
                                                                                     data-dismiss="modal">Close</button>
 
 
-                                                                                <form method="POST"
+                                                                                {{-- <form method="POST"
                                                                                     action="{{ route('cars.destroy', $car->id) }}">
                                                                                     @csrf
                                                                                     @method('DELETE')
                                                                                     <button class="btn btn-danger"
                                                                                         type="submit">Delete</button>
                                                                             </div>
-                                        </form>
+                                        </form> --}}
                                     </div>
                                 </div>
                             </div>
@@ -189,8 +189,8 @@
                             </tbody>
                             </table>
 
-                            <button class="btn-lg btn float-right btn-primary mx-1 mt-3" type="submit">Continue</button>
-                            <button class="btn-lg btn float-right btn-light mx-1 mt-3" type="submit">Add Damage &nbsp; <i
+                            <button class="btn-lg btn float-right btn-primary mx-1 mt-3" type="button" href="">Continue</button>
+                            <button class="btn-lg btn float-right btn-light mx-1 mt-3" type="submit">Add This Damage &nbsp; <i
                                     class="fa fa-plus-circle"></i> </button>
                             </form>
                         </div>

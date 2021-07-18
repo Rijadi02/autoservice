@@ -14,16 +14,16 @@ class Damage extends Model
         return $this->belongsTo(Car::class);
     }
 
-    public function hole_type()
+    public function type()
     {
-        return $this->belongsTo(HoleType::class,'hole_type');
+        return $this->belongsTo(Type::class);
     }
-    public function body_part()
+    public function part()
     {
-        return $this->belongsTo(BodyPart::class,'body_part');
+        return $this->belongsTo(Part::class);
     }
-    public function hole_number()
+    public function number()
     {
-        return $this->belongsTo(HoleNumber::class,'hole_number');
+        return $this->belongsTo(Number::class);
     }
 }
