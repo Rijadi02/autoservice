@@ -45,5 +45,7 @@ Route::delete('cars/{car}/delete', [App\Http\Controllers\CarController::class, '
 Route::get('car/{car}/damage_type', [App\Http\Controllers\DamageController::class, 'damage_type'])->name('cars.damage_type');
 Route::get('car/{car}/hail_damage', [App\Http\Controllers\DamageController::class, 'damage_hail'])->name('cars.damage_hail');
 Route::post('damage_hail/{car}/store', [App\Http\Controllers\DamageController::class, 'damage_hail_store'])->name('damage_hail.store');
+Route::get('car/{car}/images', [App\Http\Controllers\DamageController::class, 'images'])->name('cars.images');
+Route::post('images/{car}/store', [App\Http\Controllers\DamageController::class, 'images_store'])->name('images.store');
 
 

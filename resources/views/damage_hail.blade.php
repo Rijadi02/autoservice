@@ -56,7 +56,7 @@
                                     <div class="col-xxl-8 col-xl-8">
                                         <h5 class="card-title text-center">Hail AW</h5>
                                         {{-- <h3 class="text-primary">{{ $client->name }}</h3> --}}
-                                        <form method="POST" enctype="multipart/form-data" action="{{ route('damage_hail.store', $car->id) }}"
+                                        <form method="POST" action="{{ route('damage_hail.store', $car->id) }}"
                                             enctype="multipart/form-data">
                                             @csrf
 
@@ -189,9 +189,9 @@
                             </tbody>
                             </table>
 
-                            <button class="btn-lg btn float-right btn-primary mx-1 mt-3" type="button" href="">Continue</button>
                             <button class="btn-lg btn float-right btn-light mx-1 mt-3" type="submit">Add This Damage &nbsp; <i
-                                    class="fa fa-plus-circle"></i> </button>
+                                class="fa fa-plus-circle"></i> </button>
+                                <a class="btn-lg btn float-right btn-primary mx-1 mt-3" href="{{ route('cars.images', $car->id) }}">Continue</a>
                             </form>
                         </div>
                     </div>

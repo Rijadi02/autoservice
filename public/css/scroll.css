@@ -88,3 +88,8 @@
     line-height: 20px;
     padding: 0 8px;
   }
+
+  .imgPreview img {
+    padding: 8px;
+    max-width: 100px;
+}

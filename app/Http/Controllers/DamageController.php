@@ -28,6 +28,7 @@ class DamageController extends Controller
         return view('damage_type', compact('car'));
     }
 
+
     public function damage_hail_store(Car $car, Request $request){
         $data = request()->validate(
             [
@@ -49,5 +50,31 @@ class DamageController extends Controller
 
         return Redirect::route('cars.damage_hail',array('car' => $car->id));
 
+    }
+
+    public function images(Car $car){
+        return view('images', compact('car'));
+    }
+
+    public function images_store(Car $car, Request $req){
+
+        $req->validate([
+            'imageFile' => 'required',
+        ]);
+
+        if($req->hasfile('imageFile')) {
+            foreach($req->file('imageFile') as $file)
+            {
+                $name = $file->getClientOriginalName();
+                $file->move(public_path().'/uploads/', $name);
+                $imgData[] = $name;
+                // dd($name);
+
+            }
+            $car->images = json_encode($imgData);
+            $car->save();
+            return back()->with('success', 'File has successfully uploaded!');
+        // return Redirect::route('cars.damage_hail',array('car' => $car->id));
+        }
     }
 }
