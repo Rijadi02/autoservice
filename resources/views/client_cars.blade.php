@@ -54,11 +54,39 @@
                                     <td>{{$car->license}}</td>
 
 
-                                    <td><button class="btn btn-primary">Images</button></td>
+                                    <td><button class="btn btn-primary"  type="button" data-toggle="modal"
+                                        data-target="#exampleModal{{$car->id}}">Images</button></td>
+
+
                                     <td><button class="btn btn-green">Damage</button></td>
                                     <td><button class="btn btn-secondary">Report</button></td>
 
 
+                                    <div class="modal fade" id="exampleModal{{$car->id}}" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Car images</h5>
+                                                <button class="close" type="button" data-dismiss="modal"
+                                                    aria-label="Close"><span
+                                                        aria-hidden="true">×</span></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <?php
+                                                    echo $car->images;
+                                                ?>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-secondary" type="button"
+                                                    data-dismiss="modal">Close</button>
+                                                <button class="btn btn-primary" type="button">Save
+                                                    changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 </tr>
                             @endforeach
 
