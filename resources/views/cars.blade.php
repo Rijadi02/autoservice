@@ -422,7 +422,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-row">
-                                                <div class="col-md-4 form-group">
+                                                {{-- <div class="col-md-4 form-group">
                                                     <label for="body_type" class="col-md-12 col-form-label">Body
                                                         Type</label>
                                                     <input id="body_type" type="number" name="body_type"
@@ -434,43 +434,116 @@
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                     @enderror
+                                                </div> --}}
+                                                <label class="col-lg-12 text-center" for="body_type">Select Body Type</label>
+                                                <div class="col-lg-12 scroll">
+                                                    <button class="button btn btn-light mx-2" type="button"
+                                                        onclick="move(-200)">&#10094;</button>
+                                                    <div class="scrollmenu" id="s">
+
+                                                            <label>
+                                                                <input type="radio" name="body_type" value="1"
+                                                                    class="radio-hidden">
+                                                                <div class="card mx-1 shadow-none bg-light">
+                                                                    <img class="card-img" style="width: 200px;height: 200px" src="http://hagelrechner.com/css/dellenrechner/images/pkw3.jpg" alt="...">
+                                                                    <h5 class="card-title px-3 pt-3">PKW 3-Turing</h5>
+                                                                </div>
+                                                            </label>
+                                                            <label>
+                                                                <input type="radio" name="body_type" value="1"
+                                                                    class="radio-hidden">
+                                                                <div class="card mx-1 shadow-none bg-light">
+                                                                    <img class="card-img" style="width: 200px;height: 200px" src="http://hagelrechner.com/css/dellenrechner/images/pkw3.jpg" alt="...">
+                                                                    <h5 class="card-title px-3 pt-3">PKW 3-Turing</h5>
+                                                                </div>
+                                                            </label>
+                                                            <label>
+                                                                <input type="radio" name="body_type" value="1"
+                                                                    class="radio-hidden">
+                                                                <div class="card mx-1 shadow-none bg-light">
+                                                                    <img class="card-img" style="width: 200px;height: 200px" src="http://hagelrechner.com/css/dellenrechner/images/pkw3.jpg" alt="...">
+                                                                    <h5 class="card-title px-3 pt-3">PKW 3-Turing</h5>
+                                                                </div>
+                                                            </label>
+                                                            <label>
+                                                                <input type="radio" name="body_type" value="1"
+                                                                    class="radio-hidden">
+                                                                <div class="card mx-1 shadow-none bg-light">
+                                                                    <img class="card-img" style="width: 200px;height: 200px" src="http://hagelrechner.com/css/dellenrechner/images/pkw3.jpg" alt="...">
+                                                                    <h5 class="card-title px-3 pt-3">PKW 3-Turing</h5>
+                                                                </div>
+                                                            </label> <label>
+                                                                <input type="radio" name="body_type" value="1"
+                                                                    class="radio-hidden">
+                                                                <div class="card mx-1 shadow-none bg-light">
+                                                                    <img class="card-img" style="width: 200px;height: 200px" src="http://hagelrechner.com/css/dellenrechner/images/pkw3.jpg" alt="...">
+                                                                    <h5 class="card-title px-3 pt-3">PKW 3-Turing</h5>
+                                                                </div>
+                                                            </label> <label>
+                                                                <input type="radio" name="body_type" value="1"
+                                                                    class="radio-hidden">
+                                                                <div class="card mx-1 shadow-none bg-light">
+                                                                    <img class="card-img" style="width: 200px;height: 200px" src="http://hagelrechner.com/css/dellenrechner/images/pkw3.jpg" alt="...">
+                                                                    <h5 class="card-title px-3 pt-3">PKW 3-Turing</h5>
+                                                                </div>
+                                                            </label>
+                                                    </div>
+                                                    <button type="button" class="button btn btn-light mx-2"
+                                                        onclick="move(200)">&#10095;</button>
                                                 </div>
 
-                                                <div class="col-md-4 form-group">
+
+                                                <div class="form-group col-md-6 ">
                                                     <label for="brand" class="col-md-12 col-form-label">Brand</label>
-                                                    <input id="brand" type="number" name="brand" placeholder="Brand"
-                                                        class="form-control @error('brand') is-invalid @enderror"
-                                                        value="{{ old('brand') }}" autocomplete="brand">
+                                                    <select class="form-control @error('brand') is-invalid @enderror" id="brand" name="brand">
+                                                        <option value="4">Audi</option>
+                                                        <option value="2">Saab</option>
+                                                        <option value="3">Mercedes</option>
+                                                        <option value="1">Volvo</option>
+                                                    </select>
                                                     @error('brand')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                                 </div>
 
-                                                <div class="col-md-4 form-group">
+
+
+                                                <div class="form-group col-md-6 ">
                                                     <label for="model" class="col-md-12 col-form-label">Model</label>
-                                                    <input id="model" type="number" name="model" placeholder="Model"
-                                                        class="form-control @error('model') is-invalid @enderror"
-                                                        value="{{ old('model') }}" autocomplete="model">
+                                                    <select class="form-control @error('model') is-invalid @enderror" id="model" name="model">
+                                                        <option value="1">A4</option>
+                                                        <option value="2">A6</option>
+                                                        <option value="3">Q7</option>
+                                                        <option value="4">R8</option>
+                                                        <option value="5">A3</option>
+                                                    </select>
                                                     @error('model')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                                 </div>
+
                                             </div>
                                             <div class="form-row">
-                                                <div class="col-md-6 form-group">
+                                                <div class="form-group col-md-6 ">
                                                     <label for="color" class="col-md-12 col-form-label">Color</label>
-                                                    <input id="color" type="text" name="color" placeholder="Color"
-                                                        class="form-control @error('color') is-invalid @enderror"
-                                                        value="{{ old('color') }}" autocomplete="color">
+                                                    <select class="form-control @error('color') is-invalid @enderror" id="color" name="color">
+                                                        <option value="1">Red</option>
+                                                        <option value="2">White</option>
+                                                        <option value="3">Black</option>
+                                                        <option value="4">Blue</option>
+                                                        <option value="5">Silver</option>
+                                                        <option value="6">Green</option>
+                                                        <option value="7">Purple</option>
+                                                    </select>
                                                     @error('color')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                                 </div>
 
                                                 <div class="col-md-6 form-group">
@@ -515,7 +588,7 @@
                                             <hr class="my-4" />
                                             <div class="d-flex justify-content-between">
                                                 <button class="btn btn-light disabled" type="button"
-                                                    disabled>Previous</button>
+                                                    disabled>Car Registration</button>
                                                 <button type="submit" class="btn btn-primary">Next</button>
 
                                             </div>

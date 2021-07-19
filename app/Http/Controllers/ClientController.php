@@ -104,4 +104,11 @@ class ClientController extends Controller
         session()->flash('client-deleted', 'Client deleted: ' . $client->name);
         return redirect('/clients');
     }
+
+    public function cars(Client $client){
+        $clients = Client::all();
+
+        return view('client_cars', compact('clients','client'));
+
+    }
 }

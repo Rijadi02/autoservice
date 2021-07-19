@@ -291,7 +291,7 @@
                                                 </td>
                                                 <td>
                                                     <a class="btn btn-secondary"
-                                                        href="{{ route('clients.edit', $client->id) }}">All cars</a>
+                                                        href="{{ route('clients.cars', $client->id) }}">All cars</a>
                                                 </td>
                                                 <td>
                                                     <a class="btn btn-datatable btn-icon btn-transparent-dark mr-2"

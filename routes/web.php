@@ -33,6 +33,7 @@ Route::post('clients/store', [App\Http\Controllers\ClientController::class, 'sto
 Route::get('clients/{client}/edit',  [App\Http\Controllers\ClientController::class, 'edit'])->name('clients.edit');
 Route::patch('clients/{client}/update', [App\Http\Controllers\ClientController::class, 'update'])->name('clients.update');
 Route::delete('clients/{client}/delete', [App\Http\Controllers\ClientController::class, 'destroy'])->name('clients.destroy');
+Route::get('clients/{client}/cars', [App\Http\Controllers\ClientController::class, 'cars'])->name('clients.cars');
 
 //car roots
 Route::get('client/{client}/car', [App\Http\Controllers\CarController::class, 'index'])->name('cars.index');

@@ -74,7 +74,8 @@
                                                             <input type="radio" name="part" value="{{ $part->id }}"
                                                                 class="radio-hidden">
                                                             <div class="card mx-1 shadow-none bg-light">
-                                                                <img class="card-img" src="{{ $part->image }}" alt="...">
+                                                                <img class="card-img" style="width: 200px;height: 200px"
+                                                                    src="{{ $part->image }}" alt="...">
                                                                 <h5 class="card-title px-3 pt-3">{{ $part->name }}</h5>
                                                             </div>
                                                         </label>
@@ -172,37 +173,48 @@
                                                                                         type="submit">Delete</button>
                                                                             </div>
                                         </form> --}}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <a href=""
+                                                                        class="btn btn-datatable btn-icon btn-transparent-dark"
+                                                                        data-toggle="modal"
+                                                                        data-target="#id{{ $car->id }}"><i
+                                                                            data-feather="trash-2"></i></a>
+
+                                                            </td>
+
+
+
+                                                        </tr>
+                                                    @endforeach
+
+                                                </tbody>
+                                            </table>
+
+                                            <hr class="my-4" />
+                                            <div class="d-flex justify-content-between">
+                                                <a class="btn-lg btn float-right btn-primary mx-1 mt-3"
+                                                    href="{{ route('cars.images', $car->id) }}">Continue</a>
+
+                                                <button class="btn-lg btn float-right btn-light mx-1 mt-3" type="submit">Add
+                                                    This Damage &nbsp; <i class="fa fa-plus-circle"></i> </button>
+
+                                            </div>
+
+
+                                        </form>
                                     </div>
                                 </div>
                             </div>
 
-                            <a href="" class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal"
-                                data-target="#id{{ $car->id }}"><i data-feather="trash-2"></i></a>
-
-                            </td>
-
-
-
-                            </tr>
-                            @endforeach
-
-                            </tbody>
-                            </table>
-
-                            <button class="btn-lg btn float-right btn-light mx-1 mt-3" type="submit">Add This Damage &nbsp; <i
-                                class="fa fa-plus-circle"></i> </button>
-                                <a class="btn-lg btn float-right btn-primary mx-1 mt-3" href="{{ route('cars.images', $car->id) }}">Continue</a>
-                            </form>
                         </div>
                     </div>
                 </div>
-
             </div>
-        </div>
-        </div>
-        </div>
 
 
-    @endsection
+        @endsection
 
 </x-home-master>
