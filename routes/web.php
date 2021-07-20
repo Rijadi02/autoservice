@@ -48,5 +48,7 @@ Route::get('car/{car}/hail_damage', [App\Http\Controllers\DamageController::clas
 Route::post('damage_hail/{car}/store', [App\Http\Controllers\DamageController::class, 'damage_hail_store'])->name('damage_hail.store');
 Route::get('car/{car}/images', [App\Http\Controllers\DamageController::class, 'images'])->name('cars.images');
 Route::post('images/{car}/store', [App\Http\Controllers\DamageController::class, 'images_store'])->name('images.store');
+Route::get('car/{car}/flat_rates', [App\Http\Controllers\DamageController::class, 'flat_rates'])->name('cars.flat_rates');
+Route::post('flat_rates/{car}/store', [App\Http\Controllers\DamageController::class, 'flat_rates_store'])->name('flat_rates.store');
 
 

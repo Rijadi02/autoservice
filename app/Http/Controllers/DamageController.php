@@ -52,6 +52,32 @@ class DamageController extends Controller
 
     }
 
+    public function flat_rates(Car $car){
+        return view('flat_rates', compact('car'));
+    }
+
+    public function flat_rates_store(Car $car){
+        $data = request()->validate(
+            [
+                'parking_damage' => ['required'],
+                'disassambly' => ['required'],
+                'hail_damage' => ['required'],
+            ]
+        );
+
+        $damage = new \App\Models\Damage();
+
+        $damage->damage_type = 3;
+        $damage->parking_damage = $data['parking_damage'];
+        $damage->disassambly = $data['disassambly'];
+        $damage->hail_damage = $data['hail_damage'];
+        $damage->car_id = $car->id;
+        $damage->save();
+
+        return redirect()->route('cars.images', $car->id);
+
+    }
+
     public function images(Car $car){
         return view('images', compact('car'));
     }
@@ -69,11 +95,11 @@ class DamageController extends Controller
                 $file->move(public_path().'/uploads/', $name);
                 $imgData[] = $name;
                 // dd($name);
-
             }
             $car->images = json_encode($imgData);
             $car->save();
-            return back()->with('success', 'File has successfully uploaded!');
+            return redirect()->route('clients.cars',$car->client->id);
+
         // return Redirect::route('cars.damage_hail',array('car' => $car->id));
         }
     }

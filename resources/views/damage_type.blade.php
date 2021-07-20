@@ -62,10 +62,10 @@
                                                <a class="btn btn-primary w-100 mt-3" href="{{ route('cars.damage_hail', $car->id) }}">Hail AW</a>
                                            </div>
                                            <div class="col-lg-4">
-                                                <a class="btn btn-primary w-100 mt-3" href="">Disassembly AW</a>
+                                                <a class="btn btn-primary w-100 mt-3" href="{{ route('cars.damage_hail', $car->id) }}">Disassembly AW</a>
                                            </div>
                                            <div class="col-lg-4">
-                                                <a class="btn btn-primary w-100 mt-3" href="">Flat Rates</a>
+                                                <a class="btn btn-primary w-100 mt-3" href="{{ route('cars.flat_rates', $car->id) }}">Flat Rates</a>
                                            </div>
 
                                        </div>
