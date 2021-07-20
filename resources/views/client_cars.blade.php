@@ -64,7 +64,7 @@
 
                                     <div class="modal fade" id="exampleModal{{$car->id}}" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-dialog" style="max-width:50%" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="exampleModalLabel">Car images</h5>
@@ -73,9 +73,18 @@
                                                         aria-hidden="true">×</span></button>
                                             </div>
                                             <div class="modal-body">
-                                                <?php
-                                                    echo $car->images;
-                                                ?>
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        @foreach ((array) json_decode($car->images) as $image)
+                                                        <div class="col-lg-12">
+                                                            <img style="max-width: 100%" src="/uploads/{{$image}}" alt="">
+
+                                                        </div>
+                                                        @endforeach
+
+                                                    </div>
+                                                </div>
+
 
                                             </div>
                                             <div class="modal-footer">
