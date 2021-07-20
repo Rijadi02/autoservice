@@ -95,11 +95,19 @@
                 <div class="sidenav-menu">
                     <div class="nav accordion" id="accordionSidenav">
                         <div class="sidenav-menu-heading">Nav</div>
-
+                        @if(Auth::user()->role_id  == 1)
+                        <a class="nav-link" href="{{ route('home.index') }}">
+                            <div class="nav-link-icon"><i class="fa fa-chart-line"></i></div>
+                            Dashboard
+                        </a>
                         <a class="nav-link" href="{{ route('users.index') }}">
                             <div class="nav-link-icon"><i class="fas fa-user"></i></div>
                             Users
                         </a>
+
+                        @endif
+
+
 
                         <a class="nav-link" href="{{ route('clients.index') }}">
                             <div class="nav-link-icon"><i class="fas fa-users"></i></div>

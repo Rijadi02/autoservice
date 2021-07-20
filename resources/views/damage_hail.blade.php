@@ -117,12 +117,28 @@
 
                                             </div>
 
-                                            <div class="col-lg-12 mt-3 text-center">
-                                                <h3>All Damages</h3>
+
+
+
+
+
+                                            <hr class="my-4" />
+                                            <div class="d-flex justify-content-between">
+                                                <a class="btn-lg btn float-right btn-primary mx-1 mt-3"
+                                                    href="{{ route('clients.cars', $car->client->id) }}">Finish</a>
+                                                <a class="btn-lg btn float-right btn-primary mx-1 mt-3"
+                                                    href="{{ route('cars.images', $car->id) }}">Continue to images</a>
+                                                <button class="btn-lg btn float-right btn-light mx-1 mt-3" type="submit">Add
+                                                    This Damage &nbsp; <i class="fa fa-plus-circle"></i> </button>
+
                                             </div>
 
 
-                                            <table class="table table-bordered table-hover overflow-auto mt-3"
+                                        </form>
+                                        <div class="col-lg-12 mt-5 text-center">
+                                            <h3>All Damages</h3>
+                                        </div>
+                                        <table class="table table-bordered table-hover overflow-auto mt-5"
                                                 style="overflow: auto;" id="dataTable" width="100%" cellspacing="0">
                                                 <thead>
                                                     <tr>
@@ -143,7 +159,7 @@
 
                                                             <td>
 
-                                                                <div class="modal fade" id="id{{ $car->id }}"
+                                                                <div class="modal fade" id="id{{ $damage->id }}"
                                                                     tabindex="-1" role="dialog"
                                                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                     <div class="modal-dialog" role="document">
@@ -165,46 +181,31 @@
                                                                                     data-dismiss="modal">Close</button>
 
 
-                                                                                {{-- <form method="POST"
-                                                                                    action="{{ route('cars.destroy', $car->id) }}">
+                                                                                <form method="POST"
+                                                                                    action="{{ route('damages.destroy', $damage->id) }}">
                                                                                     @csrf
                                                                                     @method('DELETE')
                                                                                     <button class="btn btn-danger"
                                                                                         type="submit">Delete</button>
                                                                             </div>
-                                        </form> --}}
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <a href=""
-                                                                        class="btn btn-datatable btn-icon btn-transparent-dark"
-                                                                        data-toggle="modal"
-                                                                        data-target="#id{{ $car->id }}"><i
-                                                                            data-feather="trash-2"></i></a>
-
-                                                            </td>
-
-
-
-                                                        </tr>
-                                                    @endforeach
-
-                                                </tbody>
-                                            </table>
-
-                                            <hr class="my-4" />
-                                            <div class="d-flex justify-content-between">
-                                                <a class="btn-lg btn float-right btn-primary mx-1 mt-3"
-                                                    href="{{ route('cars.images', $car->id) }}">Continue</a>
-
-                                                <button class="btn-lg btn float-right btn-light mx-1 mt-3" type="submit">Add
-                                                    This Damage &nbsp; <i class="fa fa-plus-circle"></i> </button>
-
-                                            </div>
-
 
                                         </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="" class="btn btn-datatable btn-icon btn-transparent-dark" data-toggle="modal"
+                                data-target="#id{{ $damage->id }}"><i data-feather="trash-2"></i></a>
+
+                            </td>
+
+
+
+                            </tr>
+                            @endforeach
+
+                            </tbody>
+                            </table>
                                     </div>
                                 </div>
                             </div>

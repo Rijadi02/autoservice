@@ -57,9 +57,32 @@
                                     <td><button class="btn btn-primary"  type="button" data-toggle="modal"
                                         data-target="#exampleModal{{$car->id}}">Images</button></td>
 
+<td>
 
-                                    <td><button class="btn btn-green">Damage</button></td>
-                                    <td><button class="btn btn-secondary">Report</button></td>
+
+    @switch(count($car->damages) > 0 ? $car->damages[0]['damage_type'] : "")
+    @case(1)
+      <a class="btn btn-green text-white" href="{{route('cars.damage_hail', $car->id)}}" >Damage</a>
+
+        @break
+
+    @case(2)
+        <a class="btn btn-green text-white" href="{{route('cars.damage_hail', $car->id)}}" >Damage</a>
+
+        @break
+
+    @default
+        <a class="btn btn-green text-white">Flat Rates</a>
+    @endswitch
+</td>
+
+@if(Auth::user()->role_id  == 1)
+<td><button class="btn btn-secondary">Admin Report</button></td>
+@else
+<td><button class="btn btn-secondary">Report</button></td>
+
+@endif
+
 
 
                                     <div class="modal fade" id="exampleModal{{$car->id}}" tabindex="-1" role="dialog"

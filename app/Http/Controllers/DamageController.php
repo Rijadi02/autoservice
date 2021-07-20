@@ -103,4 +103,11 @@ class DamageController extends Controller
         // return Redirect::route('cars.damage_hail',array('car' => $car->id));
         }
     }
+
+    public function destroy(Damage $damage)
+    {
+        $damage->delete();
+        session()->flash('user-deleted', 'User deleted: ' . $damage->title);
+        return Redirect::back();
+    }
 }

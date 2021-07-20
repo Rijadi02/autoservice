@@ -50,5 +50,6 @@ Route::get('car/{car}/images', [App\Http\Controllers\DamageController::class, 'i
 Route::post('images/{car}/store', [App\Http\Controllers\DamageController::class, 'images_store'])->name('images.store');
 Route::get('car/{car}/flat_rates', [App\Http\Controllers\DamageController::class, 'flat_rates'])->name('cars.flat_rates');
 Route::post('flat_rates/{car}/store', [App\Http\Controllers\DamageController::class, 'flat_rates_store'])->name('flat_rates.store');
+Route::delete('damages/{damage}/delete', [App\Http\Controllers\DamageController::class, 'destroy'])->name('damages.destroy');
 
 
