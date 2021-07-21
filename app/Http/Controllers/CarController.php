@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Car;
 use App\Models\Client;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class CarController extends Controller
 {
@@ -106,6 +108,14 @@ class CarController extends Controller
         return redirect('/cars');
     }
 
+    public function user_invoice(Car $car){
+        $pdf = App::make('dompdf.wrapper');
+        $damages = $car->damages;
+        $client = $car->client;
 
+        $pdf->loadView('user_invoice',compact('car','damages','client'));
+        return $pdf->stream();
+
+    }
 
 }

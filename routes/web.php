@@ -53,3 +53,6 @@ Route::post('flat_rates/{car}/store', [App\Http\Controllers\DamageController::cl
 Route::delete('damages/{damage}/delete', [App\Http\Controllers\DamageController::class, 'destroy'])->name('damages.destroy');
 
 
+//invoices
+
+Route::get('car/{car}/user_invoice',[App\Http\Controllers\CarController::class, 'user_invoice'])->name('user.invoice');

@@ -77,7 +77,7 @@
 </td>
 
 @if(Auth::user()->role_id  == 1)
-<td><button class="btn btn-secondary">Admin Report</button></td>
+<td><button class="btn btn-secondary" href="{{route('user.invoice', $car->id)}}">Admin Report</button></td>
 @else
 <td><button class="btn btn-secondary">Report</button></td>
 
