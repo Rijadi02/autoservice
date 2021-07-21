@@ -62,7 +62,7 @@
 
     @switch(count($car->damages) > 0 ? $car->damages[0]['damage_type'] : "")
     @case(1)
-      <a class="btn btn-green text-white" href="{{route('cars.damage_hail', $car->id)}}" >Damage</a>
+      <a class="btn btn-green text-white" href="{{route('cars.damage_hail', $car->id)}}" > Damage</a>
 
         @break
 
