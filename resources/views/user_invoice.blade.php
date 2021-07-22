@@ -177,13 +177,7 @@
 
 <div id="invoice">
 
-    <div class="toolbar hidden-print">
-        <div class="text-right">
-            <button id="printInvoice" class="btn btn-info"><i class="fa fa-print"></i> Print</button>
-            <button class="btn btn-info"><i class="fa fa-file-pdf-o"></i> Export as PDF</button>
-        </div>
-        <hr>
-    </div>
+
     <div class="invoice overflow-auto">
         <div style="min-width: 600px">
             <header>
@@ -210,72 +204,39 @@
                 <div class="row contacts">
                     <div class="col invoice-to">
                         <div class="text-gray-light">INVOICE TO:</div>
-                        <h2 class="to">John Doe</h2>
-                        <div class="address">796 Silver Harbour, TX 79273, US</div>
-                        <div class="email"><a href="mailto:john@example.com">john@example.com</a></div>
+                        <h2 class="to">{{ $client->name}}</h2>
+                        <div class="address">{{ $client->country}},{{ $client->address}}, {{ $client->street}}, {{ $client->zip}}</div>
+                        <div class="email"><a href="mailto:{{ $client->email}}">{{ $client->email}}</a></div>
                     </div>
                     <div class="col invoice-details">
-                        <h1 class="invoice-id">INVOICE 3-2-1</h1>
-                        <div class="date">Date of Invoice: 01/10/2018</div>
-                        <div class="date">Due Date: 30/10/2018</div>
+                        <h1 class="invoice-id">INVOICE</h1>
+                        <div class="date">Date of Invoice: {{$time}}</div>
                     </div>
                 </div>
                 <table border="0" cellspacing="0" cellpadding="0">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th class="text-left">DESCRIPTION</th>
-                            <th class="text-right">HOUR PRICE</th>
-                            <th class="text-right">HOURS</th>
-                            <th class="text-right">TOTAL</th>
+                            <th class="text-left">Car Part</th>
+                            <th class="text-right">Car Type</th>
+                            <th class="text-right">Number of holes</th>
+                            <th class="text-right">Total</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="no">04</td>
-                            <td class="text-left">
-                                <h3>
-                                    <a target="_blank" href="https://www.youtube.com/channel/UC_UMEcP_kF0z4E6KbxCpV1w">
-                                        Youtube channel
-                                    </a>
-                                </h3>
-                                <a target="_blank" href="https://www.youtube.com/channel/UC_UMEcP_kF0z4E6KbxCpV1w">
-                                    Useful videos
-                                </a>
-                                to improve your Javascript skills. Subscribe and stay tuned :)
-                            </td>
-                            <td class="unit">$0.00</td>
-                            <td class="qty">100</td>
-                            <td class="total">$0.00</td>
-                        </tr>
+                        @foreach ($damages as $damage )
                         <tr>
                             <td class="no">01</td>
                             <td class="text-left">
-                                <h3>Website Design</h3>Creating a recognizable design solution based on the company's
-                                existing visual identity
+                                <h3>{{$damage->part_id}}</h3>
                             </td>
-                            <td class="unit">$40.00</td>
-                            <td class="qty">30</td>
+                            <td class="unit">{{$damage->type_id}}</td>
+                            <td class="qty">{{$damage->number_id}}</td>
                             <td class="total">$1,200.00</td>
                         </tr>
-                        <tr>
-                            <td class="no">02</td>
-                            <td class="text-left">
-                                <h3>Website Development</h3>Developing a Content Management System-based Website
-                            </td>
-                            <td class="unit">$40.00</td>
-                            <td class="qty">80</td>
-                            <td class="total">$3,200.00</td>
-                        </tr>
-                        <tr>
-                            <td class="no">03</td>
-                            <td class="text-left">
-                                <h3>Search Engines Optimization</h3>Optimize the site for search engines (SEO)
-                            </td>
-                            <td class="unit">$40.00</td>
-                            <td class="qty">20</td>
-                            <td class="total">$800.00</td>
-                        </tr>
+                        @endforeach
+
+
                     </tbody>
                     <tfoot>
                         <tr>
