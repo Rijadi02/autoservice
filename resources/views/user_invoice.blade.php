@@ -174,6 +174,8 @@
 
 </style>
 
+<body  onload="window.print()"ssss>
+
 
 <div id="invoice">
 
@@ -256,17 +258,22 @@
                         </tr>
                     </tfoot>
                 </table>
-                <div class="thanks">Thank you!</div>
+                <div class="thanks">
+                    @if($car->signature != null)
+                    <img src="/uploads/{{$car->signature}}" alt="">
+                    @else
+                    <h1>There is no signature</h1>
+                    @endif
+                </div>
                 <div class="notices">
                     <div>NOTICE:</div>
                     <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
                 </div>
             </main>
-            <footer>
-                Invoice was created on a computer and is valid without the signature and seal.
-            </footer>
+
         </div>
         <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
         <div></div>
     </div>
 </div>
+</body>

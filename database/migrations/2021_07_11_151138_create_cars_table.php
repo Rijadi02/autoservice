@@ -27,7 +27,7 @@ class CreateCarsTable extends Migration
             $table->string('images')->nullable();
             $table->integer('client_id')->unsigned();
             $table->foreign('client_id')->references('id')->on("clients")->onDelete("cascade");
-
+            $table->string('signature')->nullable();
             $table->timestamps();
         });
     }

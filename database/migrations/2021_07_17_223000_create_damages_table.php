@@ -32,7 +32,6 @@ class CreateDamagesTable extends Migration
             $table->integer('parking_damage')->nullable();
             $table->integer('disassambly')->nullable();
 
-
             $table->timestamps();
         });
     }

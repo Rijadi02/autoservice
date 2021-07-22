@@ -113,10 +113,36 @@ class CarController extends Controller
         $damages = $car->damages;
         $client = $car->client;
         $time = Carbon::now();
-        $pdf = App::make('dompdf.wrapper');
-        $pdf->loadView('user_invoice',compact('car','damages','client','time'));
-        return $pdf->download();
+        // $pdf = App::make('dompdf.wrapper');
+
+        // $pdf->loadView('user_invoice',compact('car','damages','client','time'));
+        // return $pdf->stream();
+        return view('user_invoice',compact('car','damages','client','time'));
+
 
     }
+
+    public function signature(Car $car)
+    {
+        return view('signaturePad',compact('car'));
+    }
+
+    public function signature_upload(Request $request, Car $car)
+    {
+        $folderPath = public_path('/uploads/');
+        $image_parts = explode(";base64,", $request->signed);
+        $image_type_aux = explode("image/", $image_parts[0]);
+        $image_type = $image_type_aux[1];
+        $image_base64 = base64_decode($image_parts[1]);
+        $name= uniqid() . '.'.$image_type;
+        $file = $folderPath . $name;
+        $car->signature = $name;
+        $car->save();
+        file_put_contents($file, $image_base64);
+        return redirect()->route('clients.cars',$car->client->id);
+
+    }
+
+
 
 }

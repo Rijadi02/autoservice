@@ -98,7 +98,7 @@ class DamageController extends Controller
             }
             $car->images = json_encode($imgData);
             $car->save();
-            return redirect()->route('clients.cars',$car->client->id);
+        return redirect()->route('clients.cars',$car->client->id);
 
         // return Redirect::route('cars.damage_hail',array('car' => $car->id));
         }

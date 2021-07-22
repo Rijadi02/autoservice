@@ -56,3 +56,6 @@ Route::delete('damages/{damage}/delete', [App\Http\Controllers\DamageController:
 //invoices
 
 Route::get('car/{car}/user_invoice',[App\Http\Controllers\CarController::class, 'user_invoice'])->name('user.invoice');
+
+Route::get('/signaturepad/{car}', [App\Http\Controllers\CarController::class, 'signature'])->name('signaturepad');
+Route::post('{car}/signaturepad/', [App\Http\Controllers\CarController::class, 'signature_upload'])->name('signaturepad.upload');
