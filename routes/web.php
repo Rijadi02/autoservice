@@ -59,3 +59,11 @@ Route::get('car/{car}/user_invoice',[App\Http\Controllers\CarController::class, 
 
 Route::get('/signaturepad/{car}', [App\Http\Controllers\CarController::class, 'signature'])->name('signaturepad');
 Route::post('{car}/signaturepad/', [App\Http\Controllers\CarController::class, 'signature_upload'])->name('signaturepad.upload');
+
+Route::get('prototypes', [App\Http\Controllers\HomeController::class, 'prototypes'])->name('prototypes.index');
+Route::post('prototypes/store', [App\Http\Controllers\HomeController::class, 'prototypes_store'])->name('prototypes.store');
+Route::delete('prototypes/{type}/delete', [App\Http\Controllers\HomeController::class, 'prototypes_destroy'])->name('prototypes.destroy');
+
+Route::get('brands', [App\Http\Controllers\HomeController::class, 'brands'])->name('brands.index');
+Route::post('brands/store', [App\Http\Controllers\HomeController::class, 'brands_store'])->name('brands.store');
+Route::delete('brands/{type}/delete', [App\Http\Controllers\HomeController::class, 'brands_destroy'])->name('brands.destroy');
