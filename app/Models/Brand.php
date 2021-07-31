@@ -9,7 +9,7 @@ class Brand extends Model
 {
     use HasFactory;
 
-    public function prototypes()
+    public function types()
     {
         return $this->hasMany(Prototype::class);
     }

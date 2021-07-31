@@ -493,7 +493,7 @@
                                                 </div>
 
 
-                                                <div class="form-group col-md-6 ">
+                                                {{-- <div class="form-group col-md-6 ">
                                                     <label for="brand" class="col-md-12 col-form-label">Brand</label>
                                                     <select class="form-control @error('brand') is-invalid @enderror" id="brand" name="brand">
                                                         <option value="4">Audi</option>
@@ -524,7 +524,68 @@
                                                         <strong>{{ $message }}</strong>
                                                     </span>
                                                 @enderror
-                                                </div>
+                                                </div> --}}
+
+
+                                                    {{-- aaaaaaaa --}}
+
+
+                                                    <div class="form-group col-md-6 ">
+                                                        <label for="brand" class="col-md-12 col-form-label">Brand:</label>
+                                                        <select name="brand" id="brand"
+                                                                class="form-control @error('brand') is-invalid @enderror"
+                                                                value="{{ old('brand') }}" autocomplete="brand" autofocus>
+                                                                <option value="">Select Brand</option>
+                                                                @foreach ($brands as $brand)
+                                                                <option value="{{ $brand->id }}">{{ $brand->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                        @error('brand')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                        @enderror
+                                                    </div>
+
+                                                    <div class="form-group col-md-6 ">
+                                                        <label for="model" class="col-md-12 col-form-label">Type:</label>
+                                                        <select name="model" id="model"
+                                                                class="form-control @error('model') is-invalid @enderror"
+                                                            value="{{ old('model') }}" autocomplete="model" autofocus>
+                                                            <option value="" id="0">Select type</option>
+                                                            @foreach ($models as $model)
+                                                                <option value="{{ $model->id }}" id="{{$model->brand->id}}" >{{ $model->name }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                        @error('model')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                        @enderror
+                                                    </div>
+
+                                                    <script>
+
+                                                       var mark =  $("#brand").find(':selected').attr('value');
+                                                       var type =  $("#model").find(':selected').attr('data-x');
+                                                       $("#model").hide();
+                                                       $(document).on('change', '#brand', function() {
+                                                            mark =  $("#brand").find(':selected').attr('value');
+                                                            $("#model").show();
+                                                            $("#model option")[0].selected = true
+                                                        $("#model option").each(function(i){
+                                                        if (this.attributes.id.value == mark || this.attributes.id.value == "0"){
+                                                            $(this).css("display", "block");
+                                                        }else{
+                                                            $(this).css("display", "none");
+                                                        }
+
+                                                        });
+                                                        });
+
+                                                    </script>
+
+
 
                                             </div>
                                             <div class="form-row">

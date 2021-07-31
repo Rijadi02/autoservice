@@ -105,6 +105,16 @@
                             Users
                         </a>
 
+                        <a class="nav-link" href="{{ route('brands.index') }}">
+                            <div class="nav-link-icon"><i class="fas fa-copyright"></i></div>
+                            Brands
+                        </a>
+
+                        <a class="nav-link" href="{{ route('prototypes.index') }}">
+                            <div class="nav-link-icon"><i class="fas fa-layer-group"></i></div>
+                            Models
+                        </a>
+
                         @endif
 
 
@@ -113,6 +123,9 @@
                             <div class="nav-link-icon"><i class="fas fa-users"></i></div>
                             Clients
                         </a>
+
+
+
 
                         {{-- <a class="nav-link" href="{{route('admin.blogs.index')}}">
                                 <div class="nav-link-icon"><i class="fas fa-chart-line"></i></div>

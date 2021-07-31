@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Brand;
 use App\Models\Car;
 use App\Models\Client;
+use App\Models\Prototype;
 use Barryvdh\DomPDF\Facade as PDF;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -20,7 +22,9 @@ class CarController extends Controller
     public function index(Client $client)
     {
         $cars = Car::all();
-        return view('cars', compact('cars','client'));
+        $brands = Brand::all();
+        $models = Prototype::all();
+        return view('cars', compact('cars','client','brands','models'));
     }
 
 

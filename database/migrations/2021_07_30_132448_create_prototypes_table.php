@@ -17,8 +17,8 @@ class CreatePrototypesTable extends Migration
             $table->increments('id');
             $table->text('name');
 
-            $table->integer('brands_id')->unsigned();
-            $table->foreign('brands_id')->references('id')->on("brands")->onDelete("cascade");
+            $table->integer('brand_id')->unsigned();
+            $table->foreign('brand_id')->references('id')->on("brands")->onDelete("cascade");
             $table->timestamps();
         });
     }
