@@ -32,7 +32,7 @@ class HomeController extends Controller
     {
         $brands = Brand::all();
         $prototypes = Prototype::all();
-        return view('prototypes', compact('prototypes','brands'));
+        return view('prototypes', compact('prototypes', 'brands'));
     }
     public function prototypes_store()
     {
@@ -45,7 +45,7 @@ class HomeController extends Controller
         );
         $prototype = new \App\Models\Prototype();
         $prototype->name = $data['name'];
-        $prototype->brands_id = $data['brands_id'];
+        $prototype->brand_id = $data['brands_id'];
 
         $prototype->save();
         return redirect('/prototypes');
@@ -84,6 +84,4 @@ class HomeController extends Controller
         session()->flash('body-deleted', 'Body deleted: ' . $brand->name);
         return redirect('/brands');
     }
-
-
 }
