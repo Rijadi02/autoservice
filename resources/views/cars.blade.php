@@ -554,7 +554,7 @@
                                                             value="{{ old('model') }}" autocomplete="model" autofocus>
                                                             <option value="" id="0">Select type</option>
                                                             @foreach ($models as $model)
-                                                                <option value="{{ $model->id }}" id="{{$model->brand->id}}" >{{ $model->name }}</option>
+                                                                <option value="{{ $model->id }}" id="{{$model->brands->id}}" >{{ $model->name }}</option>
                                                             @endforeach
                                                         </select>
                                                         @error('model')
