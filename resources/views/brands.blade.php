@@ -52,14 +52,12 @@
                                 id="dataTable" width="100%" cellspacing="0">
                                 <tr>
                                     <th>Name</th>
-                                    <th>Mark</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                     <tr>
                                         <th>Name</th>
-                                        <th>Mark</th>
                                         <th>Actions</th>
                                     </tr>
                                 </tfoot>

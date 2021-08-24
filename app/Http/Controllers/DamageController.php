@@ -13,23 +13,26 @@ use Illuminate\Support\Facades\Redirect;
 class DamageController extends Controller
 {
 
-    public function damage_hail(Car $car){
+    public function damage_hail(Car $car)
+    {
 
         $parts = Part::all();
         $numbers = Number::all();
         $types = Type::all();
         // $damages = Damage::where('car_id', $car->id)->get();
 
-        return view('damage_hail', compact('car','parts','numbers','types'));
+        return view('damage_hail', compact('car', 'parts', 'numbers', 'types'));
     }
 
 
-    public function damage_type(Car $car){
+    public function damage_type(Car $car)
+    {
         return view('damage_type', compact('car'));
     }
 
 
-    public function damage_hail_store(Car $car, Request $request){
+    public function damage_hail_store(Car $car, Request $request)
+    {
         $data = request()->validate(
             [
                 'part' => ['required'],
@@ -48,15 +51,16 @@ class DamageController extends Controller
         $damage->save();
 
 
-        return Redirect::route('cars.damage_hail',array('car' => $car->id));
-
+        return Redirect::route('cars.damage_hail', array('car' => $car->id));
     }
 
-    public function flat_rates(Car $car){
+    public function flat_rates(Car $car)
+    {
         return view('flat_rates', compact('car'));
     }
 
-    public function flat_rates_store(Car $car){
+    public function flat_rates_store(Car $car)
+    {
         $data = request()->validate(
             [
                 'parking_damage' => ['required'],
@@ -75,32 +79,32 @@ class DamageController extends Controller
         $damage->save();
 
         return redirect()->route('cars.images', $car->id);
-
     }
 
-    public function images(Car $car){
+    public function images(Car $car)
+    {
         return view('images', compact('car'));
     }
 
-    public function images_store(Car $car, Request $req){
+    public function images_store(Car $car, Request $req)
+    {
 
         $req->validate([
             'imageFile' => 'required',
         ]);
 
-        if($req->hasfile('imageFile')) {
-            foreach($req->file('imageFile') as $file)
-            {
+        if ($req->hasfile('imageFile')) {
+            foreach ($req->file('imageFile') as $file) {
                 $name = $file->getClientOriginalName();
-                $file->move(public_path().'/uploads/', $name);
+                $file->move(public_path() . '/uploads/', $name);
                 $imgData[] = $name;
                 // dd($name);
             }
             $car->images = json_encode($imgData);
             $car->save();
-        return redirect()->route('clients.cars',$car->client->id);
+            return redirect()->route('clients.cars', $car->client->id);
 
-        // return Redirect::route('cars.damage_hail',array('car' => $car->id));
+            // return Redirect::route('cars.damage_hail',array('car' => $car->id));
         }
     }
 

@@ -9,7 +9,7 @@ class Prototype extends Model
 {
     use HasFactory;
 
-    public function brand()
+    public function brands()
     {
         return $this->belongsTo(Brand::class);
     }

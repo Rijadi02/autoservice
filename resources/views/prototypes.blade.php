@@ -81,7 +81,7 @@
                                     @foreach ($prototypes as $type)
                                         <tr>
                                             <td>{{ $type->name }}</td>
-                                            <td>{{ $type->brand->name }}</td>
+                                            <td>{{ $type->brands->name }}</td>
 
                                             <td>
 
