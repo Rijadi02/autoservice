@@ -13,4 +13,6 @@ class Type extends Model
     {
         return $this->hasMany(Damage::class);
     }
+
+
 }

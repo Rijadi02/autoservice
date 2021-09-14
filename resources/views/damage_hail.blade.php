@@ -66,7 +66,7 @@
 
                                             <div class="scroll">
                                                 <button class="button btn btn-light mx-2" type="button"
-                                                    onclick="move(-200)">&#10094;</button>
+                                                    onclick="move(-215)">&#10094;</button>
                                                 <div class="scrollmenu" id="s">
 
                                                     @foreach ($parts as $part)
@@ -82,7 +82,7 @@
                                                     @endforeach
                                                 </div>
                                                 <button type="button" class="button btn btn-light mx-2"
-                                                    onclick="move(200)">&#10095;</button>
+                                                    onclick="move(215)">&#10095;</button>
                                             </div>
 
                                             <div class="col-lg-12 mt-3 text-center">

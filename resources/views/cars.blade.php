@@ -438,7 +438,7 @@
                                                 <label class="col-lg-12 text-center" for="body_type">Select Body Type</label>
                                                 <div class="col-lg-12 scroll">
                                                     <button class="button btn btn-light mx-2" type="button"
-                                                        onclick="move(-200)">&#10094;</button>
+                                                        onclick="move(-215)">&#10094;</button>
                                                     <div class="scrollmenu" id="s">
 
                                                             <label>
@@ -454,7 +454,7 @@
                                                                     class="radio-hidden">
                                                                 <div class="card mx-1 shadow-none bg-light">
                                                                     <img class="card-img" style="width: 200px;height: 200px" src="http://hagelrechner.com/css/dellenrechner/images/pkw3.jpg" alt="...">
-                                                                    <h5 class="card-title px-3 pt-3">PKW 3-Turing</h5>
+                                                                    <h5 class="card-title px-3 pt-3">PKW 4-Turing</h5>
                                                                 </div>
                                                             </label>
                                                             <label>
@@ -462,7 +462,7 @@
                                                                     class="radio-hidden">
                                                                 <div class="card mx-1 shadow-none bg-light">
                                                                     <img class="card-img" style="width: 200px;height: 200px" src="http://hagelrechner.com/css/dellenrechner/images/pkw3.jpg" alt="...">
-                                                                    <h5 class="card-title px-3 pt-3">PKW 3-Turing</h5>
+                                                                    <h5 class="card-title px-3 pt-3">PKW 5-Turing</h5>
                                                                 </div>
                                                             </label>
                                                             <label>
@@ -470,7 +470,7 @@
                                                                     class="radio-hidden">
                                                                 <div class="card mx-1 shadow-none bg-light">
                                                                     <img class="card-img" style="width: 200px;height: 200px" src="http://hagelrechner.com/css/dellenrechner/images/pkw3.jpg" alt="...">
-                                                                    <h5 class="card-title px-3 pt-3">PKW 3-Turing</h5>
+                                                                    <h5 class="card-title px-3 pt-3">PKW 6-Turing</h5>
                                                                 </div>
                                                             </label> <label>
                                                                 <input type="radio" name="body_type" value="1"
@@ -489,7 +489,7 @@
                                                             </label>
                                                     </div>
                                                     <button type="button" class="button btn btn-light mx-2"
-                                                        onclick="move(200)">&#10095;</button>
+                                                        onclick="move(215)">&#10095;</button>
                                                 </div>
 
 
@@ -554,7 +554,7 @@
                                                             value="{{ old('model') }}" autocomplete="model" autofocus>
                                                             <option value="" id="0">Select type</option>
                                                             @foreach ($models as $model)
-                                                                <option value="{{ $model->id }}" id="{{$model->brands->id}}" >{{ $model->name }}</option>
+                                                                <option value="{{ $model->id }}" id="{{$model->brand->id}}" >{{ $model->name }}</option>
                                                             @endforeach
                                                         </select>
                                                         @error('model')
